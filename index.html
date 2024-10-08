@@ -1,9 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      as="font"
+      href="<%= BASE_URL %>/fonts/KleinText-Medium.otf"
+      type="font/otf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="<%= BASE_URL %>/fonts/vag-world-bold.ttf"
+      type="font/ttf"
+      crossorigin="anonymous"
+    />
     <title>Vite App</title>
   </head>
   <body>
@@ -11,3 +25,14 @@
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
+<style>
+  @font-face {
+    font-family: 'VAG World';
+    src: url('fonts/vag-world-bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'KleinText';
+    src: url('fonts/KleinText-Medium.otf') format('opentype');
+  }
+</style>

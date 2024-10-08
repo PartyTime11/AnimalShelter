@@ -1,8 +1,9 @@
 <script setup>
-import jake from './components/icons/jake.vue'
+import Header from './components/Header.vue'
 </script>
 
 <template>
-  <h1>ыстыст</h1>
-  <jake />
+  <div class="m-auto h-screen">
+    <Header />
+  </div>
 </template>
