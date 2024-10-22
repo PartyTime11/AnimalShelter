@@ -29,7 +29,7 @@
   border-radius: 25px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-top: 90px;
+  margin-top: 60px;
 }
 .button2:hover {
   background-color: rgb(100, 147, 102);

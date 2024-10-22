@@ -1,5 +1,12 @@
+<script setup>
+import Button_4 from './Button_4.vue'
+</script>
+
 <template>
-  <div class="container5" style="margin-top: 50px; margin-right: 121px; margin-bottom: 50px">
+  <div
+    class="container5"
+    style="margin-top: 50px; margin-right: 121px; margin-bottom: 50px; margin-left: 0px"
+  >
     <div>
       <h2 class="first-text my-text text-size3" style="text-align: center">
         Вы готовы нам помочь?
@@ -33,7 +40,6 @@
         </div>
       </div>
     </div>
-    <Button_4 />
   </div>
 </template>
 
@@ -97,7 +103,7 @@
   border-radius: 30px;
   padding: 10px;
   margin-bottom: 30px;
-  width: 1000px;
+  width: auto;
   height: 690px;
   background-color: white;
   text-align: center;
