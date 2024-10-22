@@ -16,39 +16,54 @@ import Button_5 from './components/Button_5.vue'
 <template>
   <div class="m-auto h-screen">
     <Header />
-    <ul class="px-28 py-20 my-text left-text text-with-border1">
-      <li class="first-text text-size1 text-line-height1">
-        <span>Самое время найти лучшего друга!</span>
-      </li>
-      <li class="second-text text-with-border2 text-indentation text-size2 text-line-height2">
-        <span>Возьмите собаку или кошку из приюта «Девятая жизнь» бесплатно</span>
-      </li>
-    </ul>
-    <img src="/Титул.png" alt="Титул" class="img-pozition" style="width: 650px; height: 450px" />
-    <Button_1 />
 
-    <ul class="first-text text-size3 my-text center-text">
-      <li class="px-32" style="margin-top: 50px; margin-bottom: 40px">
-        <span
-          >Приют «Девятая жизнь» — это частный приют для бездомных животных в Омске, существующий с
-          2020 года</span
-        >
-      </li>
-      <li>
-        <img
-          src="/Flower.png"
-          alt="Flower"
-          class="px-28"
-          style="width: 1500.61px; height: 93.25px"
-        />
-      </li>
-      <li class="px-28" style="margin-top: 40px; margin-bottom: 70px">
-        <span
-          >В приюте вас ждут 500 верных собак и более 120 ласковых кошек. Вы очень нужны им,
-          приходите скорее!
-        </span>
-      </li>
-    </ul>
+    <div style="display: flex; margin-bottom: 70px">
+      <ul class="py-20 my-text left-text" style="margin-left: 121px">
+        <li class="first-text text-size1 text-line-height1">
+          <span style="white-space: nowrap"
+            >Самое время найти<br />
+            лучшего друга!</span
+          >
+        </li>
+        <li class="second-text text-indentation text-size2 text-line-height2">
+          <span
+            >Возьмите собаку или кошку из приюта<br />
+            «Девятая жизнь» бесплатно</span
+          >
+        </li>
+      </ul>
+      <img
+        src="/Титул.png"
+        alt="Титул"
+        style="width: 670px; height: 450px; margin-right: 121px; margin-top: 70px"
+      />
+      <Button_1 />
+    </div>
+
+    <div style="display: flex">
+      <ul class="first-text text-size3 my-text center-text">
+        <li class="px-32">
+          <span
+            >Приют «Девятая жизнь» — это частный приют для бездомных животных в Омске, существующий
+            с 2020 года</span
+          >
+        </li>
+        <li>
+          <img
+            src="/Flower.png"
+            alt="Flower"
+            class="px-28"
+            style="width: 1500.61px; height: 93.25px; margin-top: 35px"
+          />
+        </li>
+        <li class="px-28" style="margin-top: 40px; margin-bottom: 20px">
+          <span
+            >В приюте вас ждут 500 верных собак и более 120 ласковых кошек. Вы очень нужны им,
+            приходите скорее!
+          </span>
+        </li>
+      </ul>
+    </div>
 
     <Scroll />
     <Button_2 />
@@ -68,11 +83,11 @@ import Button_5 from './components/Button_5.vue'
             alt="Heart"
             class="px-28"
             style="
-              width: 480px;
-              height: 280px;
+              width: 370px;
+              height: 230px;
               transform: rotate(25deg);
-              margin-left: 860px;
-              margin-top: -260px;
+              margin-left: 900px;
+              margin-top: -230px;
             "
           />
         </li>
@@ -96,13 +111,15 @@ import Button_5 from './components/Button_5.vue'
       <News />
     </div>
 
-    <div>
-      <p class="first-text my-text text-size3 container-center">Полезные статьи</p>
-      <Articles />
+    <div style="display: flex">
+      <div>
+        <p class="first-text my-text text-size3 container-center">Полезные статьи</p>
+        <Articles />
+      </div>
     </div>
 
     <div>
-      <div class="color" style="margin-top: 830px; display: flex">
+      <div class="color" style="margin-top: 70px; display: flex">
         <ul class="px-28">
           <li class="first-text text-size3 my-text" style="margin-top: 30px">
             <span>Большая благодарность всем, кто нам помогает!</span>
@@ -157,10 +174,10 @@ import Button_5 from './components/Button_5.vue'
           Благотворительный проект волонтёров<br />
           приюта для животных «Девятая жизнь»
         </p>
-        <div class="second-text px-28 text-set" style="font-size: 16px; margin-left: 416px">
+        <div class="second-text px-28 text-set" style="font-size: 16px; margin-left: 350px">
           <p style="color: white; margin-top: 50px">О ПРИЮТЕ</p>
           <p class="text-line-height3" style="color: white; margin-top: 20px">
-            Наши собаки<br />Наши кошки<br />Контакты<br />О нас<br />Как помочь<br />FAQ
+            Полезные статьи<br />Каталог животных<br />Контакты<br />О нас<br />Как помочь
           </p>
         </div>
       </div>

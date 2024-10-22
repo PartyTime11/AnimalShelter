@@ -15,7 +15,7 @@
       </li>
 
       <li class="my-text cursor-pointer">
-        <span>FAQ</span>
+        <span>Полезные статьи</span>
       </li>
 
       <li class="my-text cursor-pointer">
