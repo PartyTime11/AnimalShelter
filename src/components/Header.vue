@@ -1,5 +1,5 @@
 <template>
-  <header class="flex justify-between border-b px-28 py-2">
+  <header class="flex justify-between border-b py-2 header">
     <div class="flex items-center gap-1">
       <img src="/Logo.png" alt="Logo" class="w-14" style="width: 64px; height: 70px" />
 
@@ -34,13 +34,8 @@
 </template>
 
 <style>
-.first-text {
-  font-family: 'VAG World';
-}
-.second-text {
-  font-family: 'KleinText';
-}
-.my-text {
-  color: rgb(67, 85, 56);
+.header {
+    margin: 0px -121px 0;
+    padding: 5px 141px;
 }
 </style>

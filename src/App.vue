@@ -1,215 +1,41 @@
 <script setup>
-import Header from './components/Header.vue'
-import Button_1 from './components/Button_1.vue'
-import Scroll from './components/Scroll.vue'
-import Button_2 from './components/Button_2.vue'
-import Six_comp from './components/Six_comp.vue'
-import Button_3 from './components/Button_3.vue'
-import Button_4 from './components/Button_4.vue'
-import News from './components/News.vue'
-import Articles from './components/Articles.vue'
-import Request from './components/Request.vue'
-import Members from './components/Members.vue'
-import Button_5 from './components/Button_5.vue'
+import Header from './components/Header.vue';
+import Title from './components/Title.vue';
+import Flower from './components/Flower.vue';
+import Help from './components/Help.vue';
+import Button_1 from './components/Button_1.vue';
+import Scroll from './components/Scroll.vue';
+import Six_comp from './components/Six_comp.vue';
+import News from './components/News.vue';
+import Articles from './components/Articles.vue';
+import Request from './components/Request.vue';
+import Inform from './components/Inform.vue';
+import Members from './components/Members.vue';
+import Footer from './components/Footer.vue';
 </script>
 
 <template>
-  <div class="m-auto h-screen">
-    <Header />
-
-    <div style="display: flex; margin-bottom: 70px">
-      <ul class="py-20 my-text left-text" style="margin-left: 121px">
-        <li class="first-text text-size1 text-line-height1">
-          <span style="white-space: nowrap"
-            >Самое время найти<br />
-            лучшего друга!</span
-          >
-        </li>
-        <li class="second-text text-indentation text-size2 text-line-height2">
-          <span
-            >Возьмите собаку или кошку из приюта<br />
-            «Девятая жизнь» бесплатно</span
-          >
-        </li>
-      </ul>
-      <img
-        src="/Титул.png"
-        alt="Титул"
-        style="width: 670px; height: 450px; margin-right: 121px; margin-top: 70px"
-      />
-      <Button_1 />
-    </div>
-
-    <div style="display: flex">
-      <ul class="first-text text-size3 my-text center-text">
-        <li class="px-32">
-          <span
-            >Приют «Девятая жизнь» — это частный приют для бездомных животных в Омске, существующий
-            с 2020 года</span
-          >
-        </li>
-        <li>
-          <img
-            src="/Flower.png"
-            alt="Flower"
-            class="px-28"
-            style="width: 1500.61px; height: 93.25px; margin-top: 35px"
-          />
-        </li>
-        <li class="px-28" style="margin-top: 40px; margin-bottom: 20px">
-          <span
-            >В приюте вас ждут 500 верных собак и более 120 ласковых кошек. Вы очень нужны им,
-            приходите скорее!
-          </span>
-        </li>
-      </ul>
-    </div>
-
-    <Scroll />
-    <Button_2 />
-    <div class="color px-28">
-      <ul class="px-28">
-        <li class="first-text text-size3 my-text" style="margin-bottom: 30px">
-          <span>Как помочь приюту?</span>
-        </li>
-        <li>
-          <span class="second-text my-text text-size4 text-line-height3 text-with-border3"
-            >В нашем приюте для собак и кошек социализацией, уходом за животными, выгулом собак и
-            поиском добрых и заботливых хозяев занимаются добровольцы-волонтёры, поэтому мы будем
-            очень благодарны вам за помощь приюту</span
-          >
-          <img
-            src="/Heart.png"
-            alt="Heart"
-            class="px-28"
-            style="
-              width: 370px;
-              height: 230px;
-              transform: rotate(25deg);
-              margin-left: 900px;
-              margin-top: -230px;
-            "
-          />
-        </li>
-      </ul>
-      <Six_comp />
-      <Button_3 />
-    </div>
-
-    <div>
-      <ul class="container-center">
-        <li class="my-text first-text text-size3 container-center" style="margin-top: 40px">
-          <span>Новости приюта</span>
-          <img
-            src="/Wi-Fi.png"
-            alt="Wi-Fi"
-            class=""
-            style="width: 30px; height: 30px; transform: rotate(45deg); margin-top: -30px"
-          />
-        </li>
-      </ul>
-      <News />
-    </div>
-
-    <div style="display: flex">
-      <div>
-        <p class="first-text my-text text-size3 container-center">Полезные статьи</p>
-        <Articles />
-      </div>
-    </div>
-
-    <div>
-      <div class="color" style="margin-top: 70px; display: flex">
-        <ul class="px-28">
-          <li class="first-text text-size3 my-text" style="margin-top: 30px">
-            <span>Большая благодарность всем, кто нам помогает!</span>
-          </li>
-          <li>
-            <div style="width: 500px; height: auto">
-              <img
-                src="/Cat_heart.png"
-                alt="Cat_heart"
-                style="width: 100%; height: auto; margin-top: 290px"
-              />
-            </div>
-          </li>
-        </ul>
-        <Request />
-      </div>
-      <div style="margin-left: 950px; margin-top: -220px; margin-bottom: 175px">
-        <Button_4 />
-      </div>
-    </div>
-
-    <div class="px-28">
-      <ul style="">
-        <li class="first-text my-text text-size3" style="margin-top: 60px">
-          <span>Будем рады встрече с вами!</span>
-        </li>
-        <div style="display: flex; margin-top: 30px">
-          <li class="second-text my-text text-size2">
-            <span>
-              Ниже будут указаны контакты наших волонтеров, если у вас остались<br />
-              вопросы, то они с радостью ответят. Обратите внимание, что звонки<br />
-              принимаются только в рабочее время с 9:00 до 18:00, г. Омск
-            </span>
-          </li>
-          <div>
-            <li class="text-size-2 my-text" style="margin-left: 100px">
-              <span class="first-text">Адрес</span><br />
-              <span class="second-text"
-                >г. Омск<br />
-                ул 9- Линия</span
-              >
-            </li>
-          </div>
-        </div>
-      </ul>
-    </div>
-    <Members />
-
-    <div class="color2">
-      <div style="display: flex">
-        <p class="second-text text-size2 px-28 text-set" style="color: white; margin-top: 50px">
-          Благотворительный проект волонтёров<br />
-          приюта для животных «Девятая жизнь»
-        </p>
-        <div class="second-text px-28 text-set" style="font-size: 16px; margin-left: 350px">
-          <p style="color: white; margin-top: 50px">О ПРИЮТЕ</p>
-          <p class="text-line-height3" style="color: white; margin-top: 20px">
-            Полезные статьи<br />Каталог животных<br />Контакты<br />О нас<br />Как помочь
-          </p>
-        </div>
-      </div>
-      <div class="" style="margin-top: 30px; display: flex; justify-content: center">
-        <div class="rectangle9" style="display: flex; align-items: center">
-          <img
-            src="/Loupe.png"
-            alt="Loupe"
-            style="width: 21px; height: 24px; object-fit: cover; margin-left: 5px"
-          />
-          <p class="second-text text-size2" style="color: rgb(153, 153, 153); margin-left: 20px">
-            Введите ваш запрос
-          </p>
-        </div>
-        <Button_5 />
-      </div>
-      <div class="px-28">
-        <img src="/Line.png" alt="Line" style="width: 1200px; margin-top: 30px" />
-      </div>
-      <div class="px-28">
-        <p
-          class="second-text text-size2"
-          style="color: white; margin-top: 60px; margin-bottom: 60px"
-        >
-          2020 — 2024 Девятая жизнь
-        </p>
-      </div>
-    </div>
-  </div>
+  <Header />
+  <Title />
+  <Flower />
+  <Scroll />
+  <Help />
+  <News />
+  <Articles />
+  <Request />
+  <Inform />
+  <Footer />
 </template>
 
 <style>
+#app {
+  padding: 0 121px;
+}
+@media screen and (max-width: 1000px) {
+  #app {
+    padding: 0 41px;
+  }
+}
 .first-text {
   font-family: 'VAG World';
 }
@@ -241,27 +67,6 @@ import Button_5 from './components/Button_5.vue'
 }
 .text-size4 {
   font-size: 25px;
-}
-
-.text-with-border1 {
-  border-right: 600px solid transparent;
-  padding-right: 5px;
-  display: inline-block;
-}
-.text-with-border2 {
-  border-right: 250px solid transparent;
-  padding-right: 5px;
-  display: inline-block;
-}
-.text-with-border3 {
-  border-right: 150px solid transparent;
-  padding-right: 5px;
-  display: inline-block;
-}
-.text-with-border4 {
-  border-right: 540px solid transparent;
-  padding-right: 5px;
-  display: inline-block;
 }
 
 .text-line-height1 {
@@ -298,6 +103,115 @@ import Button_5 from './components/Button_5.vue'
 .color2 {
   background-color: rgb(67, 85, 56);
   padding: 20px;
+}
+
+.title {
+  margin: 0px -121px 0;
+  padding: 0px 141px;
+}
+
+.title .top-section {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 1000px) {
+  .title .text {
+    text-align: center;
+  }
+  .title .top-section {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+}
+.title .text {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.help-shelter {
+  margin: 50px -121px 0;
+  padding: 45px 141px;
+}
+
+.help-shelter .top-section {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 1000px) {
+  .help-shelter .top-section {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.help-shelter .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.article {
+  margin: 0px -121px 0;
+  padding: 0px 141px;
+}
+.article .top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.article .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.request {
+  margin: 0px -121px 0;
+  padding: 0px 141px;
+}
+.request .top-section {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 1000px) {
+  .request .top-section {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .request .ord3 {
+    order: 1;
+  }
+};
+.request .text {
+  display: flex;
+  flex-direction: column;
+}
+.request .ord1 {
+  order: 0;
+}
+.request .ord2 {
+  order: 2;
+}
+.request .ord3 {
+  order: 3;
+}
+
+.member {
+  margin: 0px -121px 0;
+  padding: 0px 141px;
+}
+.member .top-section {
+  display: flex;
+  align-items: center;
+}
+.member .text {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.new {
+  margin: 0px -121px 0;
+  padding: 0px 141px;
 }
 
 .rectangle9 {

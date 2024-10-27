@@ -1,3 +1,7 @@
+<script setup>
+import Button_1 from './Button_1.vue';
+</script>
+
 <template>
   <div class="button10">
     <img
@@ -62,33 +66,36 @@
       style="width: 69px; height: 89px"
     />
   </div>
+  <div style="display: flex; justify-content: center; margin-top: 30px;">
+    <Button_1
+      size="big"
+      color="color-dark"
+      text_color="text-color-white"
+      hover="light"
+      >
+      Смотреть всех животных
+    </Button_1>
+  </div>
 </template>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  let scroll = document.querySelector('.scroll-container')
-  let left = document.getElementById('left_button')
-  let right = document.getElementById('right_button')
+  let scroll = document.querySelector('.scroll-container');
+  let left = document.getElementById('left_button');
+  let right = document.getElementById('right_button');
 
   right.addEventListener('click', () => {
-    scroll.scrollLeft += 310
-  })
+    scroll.scrollLeft += 310;
+  });
   left.addEventListener('click', () => {
-    scroll.scrollLeft -= 310
-  })
-})
+    scroll.scrollLeft -= 310;
+  });
+});
+const animals = await fetch("urlpurrya.com/api/animals");
+
 </script>
 
-<style>
-.first-text {
-  font-family: 'VAG World';
-}
-.second-text {
-  font-family: 'KleinText';
-}
-.my-text {
-  color: rgb(67, 85, 56);
-}
+<style scoped>
 .rectangle {
   border: 1px solid rgb(67, 85, 56);
   border-radius: 25px;
@@ -115,14 +122,19 @@ document.addEventListener('DOMContentLoaded', () => {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .button10 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px;
 }
 
 .scroll-container::-webkit-scrollbar {
   display: none;
+}
+
+.bar {
+  margin: 0px -121px 0;
+  padding: 20px 141px;
 }
 </style>
