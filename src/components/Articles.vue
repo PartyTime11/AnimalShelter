@@ -66,7 +66,7 @@ import Button_1 from './Button_1.vue';
         </div>
       </div>
     </div>
-    <div style="display: flex; justify-content: center; margin-top: 30px;">
+    <div style="display: flex; justify-content: center; margin-top: 50px;">
     <Button_1
       size="medium2"
       color="color-dark"
@@ -119,7 +119,7 @@ import Button_1 from './Button_1.vue';
 }
 
 .article {
-  margin: 0px -121px 0;
+  margin: 0px -121px 0px;
   padding: 0px 141px;
 }
 .article .top-section {
@@ -131,5 +131,10 @@ import Button_1 from './Button_1.vue';
   display: flex;
   flex-direction: column;
 }
-
+@media screen and (max-width: 1294px) {
+  .article {
+    margin: 0px -41px 0px;
+    padding: 0px 61px;
+  }
+}
 </style>

@@ -45,7 +45,7 @@
         Животные будут рады временному дому, они очень ждут вас!
       </p>
     </div>
-    <div class="rectangle1">
+    <div class="rectangle1 hide">
       <h2
         class="first-text my-text"
         style="font-size: 22px"
@@ -59,7 +59,7 @@
         Иногда наши животные нуждаются в оплате ветеринарных услуг: прививки, операции, терапия
       </p>
     </div>
-    <div class="rectangle1">
+    <div class="rectangle1 hide">
       <h2
         class="first-text my-text"
         style="font-size: 22px"
@@ -73,7 +73,7 @@
         В нашем приюте очень много животных, вы очень поможете нам, если привезёте корм
       </p>
     </div>
-    <div class="rectangle1">
+    <div class="rectangle1 hide">
       <h2
         class="first-text my-text"
         style="font-size: 22px"
@@ -125,6 +125,9 @@
 @media screen and (max-width: 1000px) {
   .container1 {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .hide {
+    display: none;
   }
 }
 

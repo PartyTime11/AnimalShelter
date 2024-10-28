@@ -4,19 +4,19 @@ import Button_1 from './Button_1.vue';
 
 <template>
   <div class="color2 footer" style="margin-top: 70px;">
-    <div style="display: flex">
-      <p class="second-text text-size2 px-28 text-set" style="color: white; margin-top: 50px">
+    <div class="container">
+      <p class="second-text text-size2 text-set" style="color: white; margin-top: 50px">
         Благотворительный проект волонтёров<br />
         приюта для животных «Девятая жизнь»
       </p>
-      <div class="second-text px-28 text-set" style="font-size: 16px; margin-left: auto">
+      <div class="second-text text-set" style="font-size: 16px; margin-left: auto;">
         <p style="color: white; margin-top: 50px">О ПРИЮТЕ</p>
         <p class="text-line-height3" style="color: white; margin-top: 20px">
           Полезные статьи<br />Каталог животных<br />Контакты<br />О нас<br />Как помочь
         </p>
       </div>
     </div>
-    <div class="" style="margin-top: 30px; display: flex; justify-content: center">
+    <div class="" style="margin-top: 50px; display: flex; justify-content: center">
       <div class="rectangle9" style="display: flex; align-items: center">
         <img
           src="/Loupe.png"
@@ -38,13 +38,13 @@ import Button_1 from './Button_1.vue';
         </Button_1>
       </div>
     </div>
-    <div class="px-28">
-      <img src="/Line.png" alt="Line" style="width: 1200px; margin-top: 30px" />
+    <div>
+      <img src="/Line.png" alt="Line" style="width: auto; margin-top: 20px" />
     </div>
-    <div class="px-28">
+    <div>
       <p
         class="second-text text-size2"
-        style="color: white; margin-top: 60px; margin-bottom: 60px"
+        style="color: white; margin-top: 30px; padding-bottom: 30px"
       >
         2020 — 2024 Девятая жизнь
       </p>
@@ -52,7 +52,12 @@ import Button_1 from './Button_1.vue';
   </div>
 </template>
 
-<style>
+<style scoped>
+.container {
+  display: flex;
+  width: auto;
+  /* gap: 400px; */
+}
 .footer {
   margin: 0px -121px 0;
   padding: 0px 141px;
@@ -70,5 +75,10 @@ import Button_1 from './Button_1.vue';
   padding-top: 7px;
   cursor: pointer;
 }
-
+@media screen and (max-width: 1294px) {
+  .footer {
+    margin: 0px -41px 0px;
+    padding: 0px 61px;
+  }
+}
 </style>

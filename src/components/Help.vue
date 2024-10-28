@@ -19,6 +19,7 @@ import Six_comp from './Six_comp.vue';
       <img
         src="/Heart.png"
         alt="Heart"
+        class="hide"
         style="height: 230px;"
       />
     </div>
@@ -51,10 +52,25 @@ import Six_comp from './Six_comp.vue';
     flex-wrap: wrap;
     justify-content: center;
   }
+  .hide {
+    display: none;
+  }
 }
 .help-shelter .text {
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 1294px) {
+  .help-shelter {
+    margin: 30px -41px 0px;
+    padding: 40px 61px;
+  }
+  .text-size4 {
+    font-size: 20px;
+  }
+  .help-shelter .text {
+    align-items: center
+}
 }
 </style>
 

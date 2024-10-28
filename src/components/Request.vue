@@ -6,7 +6,7 @@ import Button_1 from './Button_1.vue';
   <div class="color request" style="margin-top: 70px">
     <div class="top-section">
       <div class="text">
-        <div class="first-text text-size3 my-text ord1" style="margin-top: 30px; max-width: 580px;">
+        <div class="first-text text-size3 my-text ord1" style="margin-top: 30px; max-width: 475px;">
           Большая благодарность всем, кто нам помогает!
         </div>
         <div class="ord2" style="width: 500px;">
@@ -69,7 +69,7 @@ import Button_1 from './Button_1.vue';
 <style>
 .cat_heart {
   width: 100%; 
-  margin-top: 290px
+  margin-top: 300px
 }
 .rectangle5 {
   border-radius: 35px;
@@ -117,11 +117,12 @@ import Button_1 from './Button_1.vue';
 .container5 {
   flex-wrap: wrap;
   float: right;
+  margin-left: 20px;
   display: flex;
   border-radius: 30px;
   padding: 30px;
   margin-bottom: 30px;
-  width: 600px;
+  width: 570px;
   height: 690px;
   background-color: white;
   text-align: center;
@@ -143,17 +144,21 @@ import Button_1 from './Button_1.vue';
 }
 
 .request {
-  margin: 0px -121px 0;
+  margin: 0px -121px 0px;
   padding: 0px 141px;
+  margin-top: 90px;
+  background-color: rgb(249, 233, 178);
+  padding: 20px;
 }
 .request .top-section {
   display: flex;
   align-items: center;
+  justify-content: center
 }
 .request .text {
   display: flex;
   flex-direction: column;
-  height: 700px;
+  height: 800px;
   flex-wrap: wrap;
 }
 .request .ord1 {
@@ -180,6 +185,21 @@ import Button_1 from './Button_1.vue';
   }
   .request .text {
     height: auto;
+    align-items: center;
 }
+  .container5 {
+    margin-left: 0px;
+  }
+}
+@media (min-width: 1550px) and (max-width: 2000px) {
+  .container5 {
+    margin-left: 250px;
+  }
+}
+@media screen and (max-width: 1294px) {
+  .request {
+    margin: 0px -41px 0px;
+    padding: 0px 61px;
+  }
 }
 </style>

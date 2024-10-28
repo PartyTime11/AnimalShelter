@@ -31,10 +31,13 @@ import Footer from './components/Footer.vue';
 #app {
   padding: 0 121px;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1294px) {
   #app {
     padding: 0 41px;
   }
+  .text-size3 {
+  font-size: 25px;
+}
 }
 .first-text {
   font-family: 'VAG World';
@@ -105,126 +108,4 @@ import Footer from './components/Footer.vue';
   padding: 20px;
 }
 
-.title {
-  margin: 0px -121px 0;
-  padding: 0px 141px;
-}
-
-.title .top-section {
-  display: flex;
-  align-items: center;
-}
-@media screen and (max-width: 1000px) {
-  .title .text {
-    text-align: center;
-  }
-  .title .top-section {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-}
-.title .text {
-  display: flex;
-  flex-direction: column;
-}
-
-
-.help-shelter {
-  margin: 50px -121px 0;
-  padding: 45px 141px;
-}
-
-.help-shelter .top-section {
-  display: flex;
-  align-items: center;
-}
-@media screen and (max-width: 1000px) {
-  .help-shelter .top-section {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-.help-shelter .text {
-  display: flex;
-  flex-direction: column;
-}
-
-.article {
-  margin: 0px -121px 0;
-  padding: 0px 141px;
-}
-.article .top-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.article .text {
-  display: flex;
-  flex-direction: column;
-}
-
-.request {
-  margin: 0px -121px 0;
-  padding: 0px 141px;
-}
-.request .top-section {
-  display: flex;
-  align-items: center;
-}
-@media screen and (max-width: 1000px) {
-  .request .top-section {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .request .ord3 {
-    order: 1;
-  }
-};
-.request .text {
-  display: flex;
-  flex-direction: column;
-}
-.request .ord1 {
-  order: 0;
-}
-.request .ord2 {
-  order: 2;
-}
-.request .ord3 {
-  order: 3;
-}
-
-.member {
-  margin: 0px -121px 0;
-  padding: 0px 141px;
-}
-.member .top-section {
-  display: flex;
-  align-items: center;
-}
-.member .text {
-  display: flex;
-  flex-direction: column;
-}
-
-
-.new {
-  margin: 0px -121px 0;
-  padding: 0px 141px;
-}
-
-.rectangle9 {
-  border-radius: 50px;
-  padding: 10px;
-  margin-right: 30px;
-  margin-bottom: 30px;
-  width: 375px;
-  height: 68px;
-  background-color: rgb(255, 255, 255);
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 7px;
-  cursor: pointer;
-}
 </style>

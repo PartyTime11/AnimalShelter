@@ -1,7 +1,7 @@
 <template>
   <div class="new">
     <div class="container-center">
-      <div class="my-text first-text text-size3 container-center" style="margin-top: 40px; position: relative;">
+      <div class="my-text first-text text-size3 container-center" style="margin-top: 40px;">
         <span>Новости приюта</span>
       </div>
       <div>
@@ -54,7 +54,7 @@
           <li class="second-text my-text text-size2" style="margin-top: 30px">
             <span>Приходите, хвостатые друзья ждут именно Вас!</span>
           </li>
-          <li class="second-text my-text text-size2 text-with-border4" style="margin-top: 30px">
+          <li class="second-text my-text text-size2" style="margin-top: 30px">
             <span
               >24 января 2025 с 11 до 18 часов ТЦ МЕГА, г. Омск, ул. бул. Архитекторов, 35 Вход
               свободный</span
@@ -62,13 +62,6 @@
           </li>
         </ul>
       </div>
-    </div>
-    <div>
-      <img
-        src="/Right_circle.png"
-        alt="Right_circle"
-        style="width: 200px; height: 350px; position: absolute; right: 0; margin-top: -800px"
-      />
     </div>
   </div>
 </template>
@@ -118,7 +111,13 @@
 }
 
 .new {
-  margin: 0px -121px 0;
+  margin: 0px -121px 0px;
   padding: 5px 141px;
+}
+@media screen and (max-width: 1294px) {
+  .new {
+    margin: 0px -41px 0px;
+    padding: 0px 61px;
+  }
 }
 </style>

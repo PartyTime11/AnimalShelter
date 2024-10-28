@@ -12,7 +12,7 @@
           style="width: auto; height: auto; margin-top: 35px;"
         />
       </div>
-      <div style="margin-top: 40px; margin-bottom: 20px">
+      <div style="margin-top: 40px; margin-bottom: 40px">
           В приюте вас ждут 500 верных собак и более 120 ласковых кошек. Вы очень нужны им,
           приходите скорее!
       </div>

@@ -46,4 +46,10 @@ import Members from './Members.vue';
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-width: 1294px) {
+  .member {
+    margin: 0px -41px 0px;
+    padding: 0px 61px;
+  }
+}
 </style>

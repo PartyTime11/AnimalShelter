@@ -43,8 +43,16 @@
 
 <style>
 .member {
-  margin: 0px -121px 0;
-  padding: 0px 141px;
+  margin: 0px -41px 0px;
+  padding: 0px 61px;
+}
+.member .top-section {
+  display: flex;
+  align-items: center;
+}
+.member .text {
+  display: flex;
+  flex-direction: column;
 }
 .member .rectangle8 {
   border-radius: 50px;
@@ -76,5 +84,11 @@
   height: 186px;
   border-radius: 50px 0px 0px 50px;
   object-fit: cover;
+}
+@media screen and (max-width: 1294px) {
+  .member {
+    margin: 0px -41px 0px;
+    padding: 0px 61px;
+  }
 }
 </style>
