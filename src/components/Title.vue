@@ -1,5 +1,5 @@
 <script setup>
-import Button_1 from './Button_1.vue';
+import Button_1 from './Button_1.vue'
 </script>
 
 <template>
@@ -7,29 +7,22 @@ import Button_1 from './Button_1.vue';
     <div class="top-section">
       <div class="text">
         <div class="my-text left-text container">
-          <div class="first-text text-size1 text-line-height1 ord1" style="max-width: 400px;">
-              Самое время найти лучшего друга!
+          <div class="first-text text-size1 text-line-height1 ord1" style="max-width: 400px">
+            Самое время найти лучшего друга!
           </div>
-          <div class="second-text text-indentation text-size2 text-line-height2 ord2" style="max-width: 400px;">
-              Возьмите собаку или кошку из приюта
-              «Девятая жизнь» бесплатно
+          <div
+            class="second-text text-indentation text-size2 text-line-height2 ord2"
+            style="max-width: 400px"
+          >
+            Возьмите собаку или кошку из приюта «Девятая жизнь» бесплатно
           </div>
           <div class="center ord3">
-            <Button_1
-              size="medium"
-              color="color-dark"
-              text_color="text-color-white"
-              hover="light"
-            >
+            <Button_1 size="medium" color="color-dark" text_color="text-color-white" hover="light">
               Перейти в каталог
-          </Button_1>
+            </Button_1>
           </div>
           <div class="ord4">
-            <img
-              src="/Титул.png"
-              alt="Титул"
-              class="img"
-            />
+            <img src="/Титул.png" alt="Титул" class="img" />
           </div>
         </div>
       </div>
@@ -37,11 +30,11 @@ import Button_1 from './Button_1.vue';
   </div>
 </template>
 
-<style scoped> 
+<style scoped>
 .container {
-  display: flex; 
-  flex-direction: column; 
-  height: 450px; 
+  display: flex;
+  flex-direction: column;
+  height: 450px;
   flex-wrap: wrap;
   margin-top: 20px;
 }
@@ -49,16 +42,14 @@ import Button_1 from './Button_1.vue';
   font-size: 40px;
 }
 .img {
-  max-width: 670px; 
-  max-height: 450px; 
+  max-width: 670px;
+  max-height: 450px;
 }
 .text-indentation {
   margin-top: 35px;
 }
 .title {
   display: flex;
-  /* margin: 0px -90px 0;
-  padding: 0px 141px; */
 }
 
 .title .top-section {
@@ -81,71 +72,70 @@ import Button_1 from './Button_1.vue';
   order: 4;
 }
 
-
 @media screen and (max-width: 1000px) {
   .img {
-  width: 800px; 
-  height: auto; 
-  margin-top: 20px;
-}
-.title {
-  justify-content: center;
-}
-.title .text {
-  justify-content: center;
-}
-.title .top-section {
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.left-text {
-  text-align: center;
-}
-.center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.text-size1 {
-  font-size: 40px;
-}
-.ord4 {
-order: 1;
-}
-.ord2 {
-  margin-bottom: 20px;
-}
-.container {
-  height: auto;
-  align-items: center;
-}
+    width: 800px;
+    height: auto;
+    margin-top: 20px;
+  }
+  .title {
+    justify-content: center;
+  }
+  .title .text {
+    justify-content: center;
+  }
+  .title .top-section {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .left-text {
+    text-align: center;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-size1 {
+    font-size: 40px;
+  }
+  .ord4 {
+    order: 1;
+  }
+  .ord2 {
+    margin-bottom: 20px;
+  }
+  .container {
+    height: auto;
+    align-items: center;
+  }
 }
 
 @media (min-width: 1294px) and (max-width: 1504px) {
-.img {
-  width: 600px;
-  height: auto;
-}
-.text-size1 {
-  font-size: 40px;
-}
+  .img {
+    width: 600px;
+    height: auto;
+  }
+  .text-size1 {
+    font-size: 40px;
+  }
 }
 
 @media (min-width: 1001px) and (max-width: 1294px) {
   .img {
-  width: 500px;
-  height: auto;
-  margin-left: 10px;
-}
-.text-size1 {
-  font-size: 40px;
-}
-.ord2 {
-  margin-bottom: 20px;
-}
-.container {
-  height: 330px;
-}
+    width: 500px;
+    height: auto;
+    margin-left: 10px;
+  }
+  .text-size1 {
+    font-size: 40px;
+  }
+  .ord2 {
+    margin-bottom: 20px;
+  }
+  .container {
+    height: 330px;
+  }
 }
 
 @media screen and (min-width: 1400px) {

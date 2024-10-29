@@ -1,6 +1,10 @@
 <template>
   <div class="wrapper">
-    <header class="flex justify-between border-b py-2 header" style="align-items: center" @click="open">
+    <header
+      class="flex justify-between border-b py-2 header"
+      style="align-items: center"
+      @click="open"
+    >
       <div class="flex items-center gap-1">
         <img src="/Logo.png" alt="Logo" class="w-14" style="width: 64px; height: 70px" />
 
@@ -9,10 +13,8 @@
           <h2>жизнь</h2>
         </div>
       </div>
-      <button class="header_burger" id="burger">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="flex items-center gap-12 second-text tracking-wide text-l hide menu" id="menu">
+      <button id="burger" class="header_burger"><span /><span /><span /></button>
+      <nav id="menu" class="flex items-center gap-12 second-text tracking-wide text-l hide menu">
         <ul class="ul items-center gap-12 second-text tracking-wide text-l">
           <li class="my-text cursor-pointer menu_list">
             <span>Каталог животных</span>
@@ -40,24 +42,23 @@
 </template>
 
 <script setup>
-  function open(event) {
-      document.querySelector("header").classList.toggle("open");
-  };
+function open(event) {
+  document.querySelector('header').classList.toggle('open')
+}
 </script>
-
-
 
 <style>
 .header {
   width: 100%;
   position: relative;
 }
- .ul {
+.ul {
   display: flex;
- }
+}
 .menu {
-  transition: transform .5s, visibility .5s;
-  display: none;
+  transition:
+    transform 0.5s,
+    visibility 0.5s;
 }
 .header_burger {
   display: none;
@@ -76,12 +77,15 @@
   height: 3px;
   background-color: rgb(67, 85, 56);
   left: 5px;
-  transition: background-color .05s, opacity .25s, transform .5s;
+  transition:
+    background-color 0.05s,
+    opacity 0.5s,
+    transform 0.5s;
   will-change: transform;
 }
 
 .header_burger:hover span {
-  background-color: rgb(67, 85, 56);;
+  background-color: rgb(67, 85, 56);
 }
 
 .header_burger span:nth-child(1) {
@@ -101,20 +105,22 @@
   transform: translateY(0) rotate(-45deg);
 }
 
-
 @media (max-width: 1090px) {
   .header_burger {
-    display:block;
+    display: block;
   }
   .menu {
     position: absolute;
-    right: -300px;
+    right: -30px;
     top: 0;
     width: 300px;
     padding: 75px 20px 20px 20px;
-    background-color:rgb(249, 233, 178);
-    transition: right .5s, visibility .5s;
+    background-color: rgb(249, 233, 178);
+    transition:
+      right 0.5s,
+      visibility 0.5s;
     visibility: hidden;
+    border-radius: 0 0 25px 25px;
   }
   .menu_list {
     display: block;
@@ -122,7 +128,7 @@
   }
   .header.open .menu {
     right: 0;
-    display: none;
+    visibility: visible;
   }
   .ul {
     display: block;

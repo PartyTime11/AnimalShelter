@@ -43,8 +43,8 @@
 
 <style>
 .member {
-  margin: 0px -41px 0px;
-  padding: 0px 61px;
+  margin: 0px -121px 0px;
+  padding: 0px 141px;
 }
 .member .top-section {
   display: flex;
