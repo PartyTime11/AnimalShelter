@@ -1,5 +1,5 @@
 <template>
-  <div class="container8" style="margin-top: 50px">
+  <div class="container8 member" style="margin-top: 50px; gap: 60px">
     <div class="rectangle8">
       <img src="/Evdokia_monkey.jpg" alt="Evdokia_monkey" class="img2" style="margin-right: 10px" />
       <div style="margin-left: 30px; margin-top: 20px">
@@ -42,30 +42,26 @@
 </template>
 
 <style>
-.first-text {
-  font-family: 'VAG World';
+.member {
+  margin: 0px -121px 0px;
+  padding: 0px 141px;
 }
-.second-text {
-  font-family: 'KleinText';
+.member .top-section {
+  display: flex;
+  align-items: center;
 }
-.my-text {
-  color: rgb(67, 85, 56);
+.member .text {
+  display: flex;
+  flex-direction: column;
 }
-.rectangle8 {
+.member .rectangle8 {
   border-radius: 50px;
-  /* padding: 10px; */
-  margin-right: 80px;
-  margin-bottom: 70px;
   width: 525px;
   height: 186px;
   background-color: white;
   text-align: left;
-  /* padding-left: 25px; */
-  /* padding-right: 25px; */
-  /* padding-top: 7px; */
   border: 1px solid rgb(67, 85, 56);
   display: flex;
-  /* align-items: center; */
 }
 .container8 {
   flex-wrap: wrap;
@@ -88,5 +84,11 @@
   height: 186px;
   border-radius: 50px 0px 0px 50px;
   object-fit: cover;
+}
+@media screen and (max-width: 1294px) {
+  .member {
+    margin: 0px -41px 0px;
+    padding: 0px 61px;
+  }
 }
 </style>
