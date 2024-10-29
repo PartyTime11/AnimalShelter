@@ -13,7 +13,7 @@ import Button_1 from './Button_1.vue';
       <div class="rectangle3" style="display: flex">
         <img src="/Homeless.jpg" 
         alt="Homeless" class="img1" style="border-radius: 25px 0 0 25px" />
-        <div style="text-align: center; margin-top: 60px; margin-left: 20px">
+        <div style="text-align: center; margin-top: 10px; margin-left: 20px">
           <p class="second-text my-text text-set2 text-size2">
             Что делать, если вы нашли бездомное животное и хотите забрать его к себе?
           </p>

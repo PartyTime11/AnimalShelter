@@ -90,7 +90,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .first-text {
   font-family: 'VAG World';
 }

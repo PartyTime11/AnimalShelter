@@ -93,8 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
     scroll.scrollLeft -= 310;
   });
 });
-const animals = await fetch("urlpurrya.com/api/animals");
-
 </script>
 
 <style scoped>

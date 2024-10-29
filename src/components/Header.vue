@@ -1,6 +1,6 @@
 <template>
-  <body class="wrapper">
-    <header class="flex justify-between border-b py-2 header" style="align-items: center">
+  <div class="wrapper">
+    <header class="flex justify-between border-b py-2 header" style="align-items: center" @click="open">
       <div class="flex items-center gap-1">
         <img src="/Logo.png" alt="Logo" class="w-14" style="width: 64px; height: 70px" />
 
@@ -13,7 +13,7 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="flex items-center gap-12 second-text tracking-wide text-l hide menu" id="menu">
-        <ul class=" flex items-center gap-12 second-text tracking-wide text-l">
+        <ul class="ul items-center gap-12 second-text tracking-wide text-l">
           <li class="my-text cursor-pointer menu_list">
             <span>Каталог животных</span>
           </li>
@@ -36,29 +36,28 @@
         </ul>
       </nav>
     </header>
-  </body>
+  </div>
 </template>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("burger").addEventListener("click", function() {
-    document.querySelector("header").classList.toggle("open");
-  });
-});
+<script setup>
+  function open(event) {
+      document.querySelector("header").classList.toggle("open");
+  };
 </script>
 
 
 
 <style>
-.wrapper {
-  overflow: hidden;
+.header {
   width: 100%;
-  position: relative;}
-header {
-  margin-bottom: 0;
+  position: relative;
 }
+ .ul {
+  display: flex;
+ }
 .menu {
   transition: transform .5s, visibility .5s;
+  display: none;
 }
 .header_burger {
   display: none;
@@ -68,7 +67,7 @@ header {
   border: none;
   z-index: 2;
   outline: none;
-  background-color: transponent;
+  background-color: transparent;
   cursor: pointer;
 }
 .header_burger span {
@@ -109,9 +108,9 @@ header {
   }
   .menu {
     position: absolute;
-    right: -350px;
+    right: -300px;
     top: 0;
-    width: 350px;
+    width: 300px;
     padding: 75px 20px 20px 20px;
     background-color:rgb(249, 233, 178);
     transition: right .5s, visibility .5s;
@@ -123,7 +122,10 @@ header {
   }
   .header.open .menu {
     right: 0;
-    visibility: visible;
+    display: none;
+  }
+  .ul {
+    display: block;
   }
 }
 </style>
