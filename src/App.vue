@@ -1,30 +1,9 @@
 <script setup>
-import Header from './components/Header.vue';
-import Title from './components/Title.vue';
-import Flower from './components/Flower.vue';
-import Help from './components/Help.vue';
-import Button_1 from './components/Button_1.vue';
-import Scroll from './components/Scroll.vue';
-import Six_comp from './components/Six_comp.vue';
-import News from './components/News.vue';
-import Articles from './components/Articles.vue';
-import Request from './components/Request.vue';
-import Inform from './components/Inform.vue';
-import Members from './components/Members.vue';
-import Footer from './components/Footer.vue';
+
 </script>
 
 <template>
-  <Header />
-  <Title />
-  <Flower />
-  <Scroll />
-  <Help />
-  <News />
-  <Articles />
-  <Request />
-  <Inform />
-  <Footer />
+  <RouterView />
 </template>
 
 <style>
