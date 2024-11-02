@@ -43,7 +43,7 @@
 
 <script setup>
 function open(event) {
-  document.querySelector('header').classList.toggle('open')
+  document.querySelector('header').classList.toggle('open');
 }
 </script>
 
