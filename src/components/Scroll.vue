@@ -1,7 +1,3 @@
-<script setup>
-import Button_1 from './Button_1.vue';
-</script>
-
 <template>
   <div class="bar">
     <div class="button10" style="">
@@ -13,50 +9,14 @@ import Button_1 from './Button_1.vue';
         style="width: 69px; height: 89px"
       />
       <div class="scroll-container">
-        <div class="rectangle">
-          <img src="/Asya.jpg" alt="Asya" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Acя</h2>
-          <p class="second-text my-text text-size2">4 месяца, девочка</p>
-        </div>
-        <div class="rectangle">
-          <img src="/Mikki.jpg" alt="Mikki" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Микки</h2>
-          <p class="second-text my-text text-size2">3 года, мальчик</p>
-        </div>
-        <div class="rectangle">
-          <img src="/Oskar.jpg" alt="Oskar" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Оскар</h2>
-          <p class="second-text my-text text-size2">5 лет, мальчик</p>
-        </div>
-        <div class="rectangle">
-          <img src="/Yasha.jpeg" alt="Yasha" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Яша</h2>
-          <p class="second-text my-text text-size2">6 лет, мальчик</p>
-        </div>
-        <div class="rectangle">
-          <img src="/Dim.jpg" alt="Dim" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Дим</h2>
-          <p class="second-text my-text text-size2">8 лет, мальчик</p>
-        </div>
-        <div class="rectangle">
-          <img src="/Dim.jpg" alt="Dim" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Дим</h2>
-          <p class="second-text my-text text-size2">8 лет, мальчик</p>
-        </div>
-        <div class="rectangle">
-          <img src="/Dim.jpg" alt="Dim" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Дим</h2>
-          <p class="second-text my-text text-size2">8 лет, мальчик</p>
-        </div>
-        <div class="rectangle">
-          <img src="/Dim.jpg" alt="Dim" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Дим</h2>
-          <p class="second-text my-text text-size2">8 лет, мальчик</p>
-        </div>
-        <div class="rectangle">
-          <img src="/Dim.jpg" alt="Dim" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Дим</h2>
-          <p class="second-text my-text text-size2">8 лет, мальчик</p>
+        <div 
+          v-for="animal of animals_json"
+          :key="animal.id"
+          class="rectangle"
+        >
+          <img :src="animals_images_url + animal.image" alt="Asya" class="img" />
+          <h2 class="first-text my-text" style="font-size: 30px">{{ animal.name }}</h2>
+          <p class="second-text my-text text-size2">{{ animal.age }}</p>
         </div>
       </div>
       <img
@@ -65,6 +25,7 @@ import Button_1 from './Button_1.vue';
         alt="Right"
         class="cursor-pointer pozition-right"
         style="width: 69px; height: 89px"
+        @click="right_click"
       />
     </div>
     <div style="display: flex; justify-content: center; margin-top: 50px;">
@@ -80,19 +41,20 @@ import Button_1 from './Button_1.vue';
   </div>
 </template>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  let scroll = document.querySelector('.scroll-container');
-  let left = document.getElementById('left_button');
-  let right = document.getElementById('right_button');
+<script setup>
+import Button_1 from './Button_1.vue';
 
-  right.addEventListener('click', () => {
-    scroll.scrollLeft += 310;
-  });
-  left.addEventListener('click', () => {
-    scroll.scrollLeft -= 310;
-  });
-});
+let server_url = "http://127.0.0.1:3000/";
+let animals_url = "http://127.0.0.1:3000/animals/";
+let animals_images_url = "http://127.0.0.1:3000/animal_previews/";
+
+
+let response = await fetch(animals_url);
+let animals_json = await response.json();
+
+const right_click = (event) => {
+  document.querySelector('.scroll-container').scrollLeft += 310;
+};
 </script>
 
 <style scoped>
