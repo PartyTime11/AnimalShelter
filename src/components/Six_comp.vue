@@ -91,15 +91,6 @@
 </template>
 
 <style scoped>
-.first-text {
-  font-family: 'VAG World';
-}
-.second-text {
-  font-family: 'KleinText';
-}
-.my-text {
-  color: rgb(67, 85, 56);
-}
 .rectangle1 {
   border-radius: 35px;
   margin: 0 auto;

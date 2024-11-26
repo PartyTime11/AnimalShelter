@@ -66,7 +66,7 @@ import Button_1 from './Button_1.vue';
         </div>
       </div>
     </div>
-    <div style="display: flex; justify-content: center; margin-top: 50px;">
+    <div class="text-size2" style="display: flex; justify-content: center; margin-top: 50px;">
     <Button_1
       size="medium2"
       color="color-dark"

@@ -27,7 +27,7 @@ import Button_1 from './Button_1.vue';
           Введите ваш запрос
         </p>
       </div>
-      <div style="">
+      <div class="text-size2">
         <Button_1
           size="tiny"
           color="color-light"
