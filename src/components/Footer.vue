@@ -12,7 +12,7 @@ import Button_1 from './Button_1.vue';
       <div class="second-text text-set" style="font-size: 16px; margin-left: auto;">
         <p style="color: white; margin-top: 50px">О ПРИЮТЕ</p>
         <p class="text-line-height3" style="color: white; margin-top: 20px">
-          Полезные статьи<br />Каталог животных<br />Контакты<br />О нас<br />Как помочь
+          ЛК<br />Полезные статьи<br />Каталог животных<br />Контакты<br />О нас<br />Как помочь
         </p>
       </div>
     </div>
@@ -56,7 +56,6 @@ import Button_1 from './Button_1.vue';
 .container {
   display: flex;
   width: auto;
-  /* gap: 400px; */
 }
 .footer {
   margin: 0px -121px 0;
