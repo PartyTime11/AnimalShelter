@@ -3,37 +3,54 @@
     <header
       class="flex justify-between border-b py-2 header"
       style="align-items: center"
-      @click="open"
     >
-      <div class="flex items-center gap-1">
-        <img src="/Logo.png" alt="Logo" class="w-14" style="width: 64px; height: 70px" />
+      <router-link to="/">
+        <div class="flex items-center gap-1" style="cursor: pointer;">
+          <img src="/Logo.png" alt="Logo" class="w-14" style="width: 64px; height: 70px" />
 
-        <div class="text-xl first-text tracking-wide my-text">
-          <h1>Девятая</h1>
-          <h2>жизнь</h2>
+          <div class="text-xl first-text tracking-wide my-text">
+            <h1>Девятая</h1>
+            <h2>жизнь</h2>
+          </div>
         </div>
-      </div>
-      <button id="burger" class="header_burger"><span /><span /><span /></button>
+      </router-link>
+      <button id="burger" class="header_burger" @click="open"><span /><span /><span /></button>
       <nav id="menu" class="flex items-center gap-12 second-text tracking-wide text-l hide menu">
         <ul class="ul items-center gap-12 second-text tracking-wide text-l">
           <li class="my-text cursor-pointer menu_list">
-            <span>Каталог животных</span>
+            <router-link to="/registration">
+              <button>ЛК</button>
+            </router-link>
+          </li>
+
+          <li class="my-text cursor-pointer menu_list" @click="$router.push('/catalogue')">
+            <router-link to="/сatalogue">
+              <button>Каталог животных</button>
+            </router-link>
           </li>
 
           <li class="my-text cursor-pointer menu_list link">
-            <span>Полезные статьи</span>
+            <router-link to="/useful_articles">
+              <button>Полезные статьи</button>
+            </router-link>
           </li>
 
           <li class="my-text cursor-pointer menu_list link">
-            <span>О нас</span>
+            <router-link to="/about_us">
+              <button>О нас</button>
+            </router-link>
           </li>
 
           <li class="my-text cursor-pointer menu_list link">
-            <span>Помочь приюту</span>
+            <router-link to="/help">
+              <button>Помочь приюту</button>
+            </router-link>
           </li>
 
           <li class="my-text cursor-pointer menu_list link">
-            <span>Контакты</span>
+            <router-link to="/contacts">
+              <button>Контакты</button>
+            </router-link>
           </li>
         </ul>
       </nav>

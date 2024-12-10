@@ -16,7 +16,7 @@ import Button_1 from './Button_1.vue'
           >
             Возьмите собаку или кошку из приюта «Девятая жизнь» бесплатно
           </div>
-          <div class="center ord3">
+          <div class="center text-size2 ord3">
             <Button_1 size="medium" color="color-dark" text_color="text-color-white" hover="light">
               Перейти в каталог
             </Button_1>
@@ -141,6 +141,13 @@ import Button_1 from './Button_1.vue'
 @media screen and (min-width: 1400px) {
   .img {
     margin-left: 100px;
+  }
+}
+@media screen and (max-width: 705px) {
+  .img {
+    width: 450px;
+    height: auto;
+    margin-left: 10px;
   }
 }
 </style>

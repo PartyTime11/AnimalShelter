@@ -1,6 +1,4 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
   <RouterView />
@@ -15,8 +13,11 @@
     padding: 0 41px;
   }
   .text-size3 {
-  font-size: 25px;
-}
+    font-size: 25px;
+  }
+  .text-size1 {
+    font-size: 40px;
+  }
 }
 .first-text {
   font-family: 'VAG World';
@@ -49,6 +50,12 @@
 }
 .text-size4 {
   font-size: 25px;
+}
+.text-size5 {
+  font-size: 30px;
+}
+.text-size6 {
+  font-size: 15px;
 }
 
 .text-line-height1 {
@@ -86,5 +93,4 @@
   background-color: rgb(67, 85, 56);
   padding: 20px;
 }
-
 </style>

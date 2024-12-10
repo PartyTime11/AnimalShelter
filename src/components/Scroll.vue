@@ -7,16 +7,17 @@
         alt="Left"
         class="cursor-pointer pozition-left"
         style="width: 69px; height: 89px"
+        @click="left_click"
       />
       <div class="scroll-container">
         <div 
           v-for="animal of animals_json"
           :key="animal.id"
-          class="rectangle"
+          class="rectangle70"
         >
           <img :src="animals_images_url + animal.image" alt="Asya" class="img" />
           <h2 class="first-text my-text" style="font-size: 30px">{{ animal.name }}</h2>
-          <p class="second-text my-text text-size2">{{ animal.age }}</p>
+          <p class="second-text my-text text-size2">{{ animal.age }} лет, {{ animal.gender }}</p>
         </div>
       </div>
       <img
@@ -28,15 +29,17 @@
         @click="right_click"
       />
     </div>
-    <div style="display: flex; justify-content: center; margin-top: 50px;">
-      <Button_1
-        size="big"
-        color="color-dark"
-        text_color="text-color-white"
-        hover="light"
-        >
-        Смотреть всех животных
-      </Button_1>
+    <div class="text-size2" style="display: flex; justify-content: center; margin-top: 50px;">
+      <router-link to="/catalogue">
+        <Button_1
+            size="big"
+            color="color-dark"
+            text_color="text-color-white"
+            hover="light"
+            >
+            Смотреть всех животных
+        </Button_1>
+      </router-link>
     </div>
   </div>
 </template>
@@ -44,21 +47,31 @@
 <script setup>
 import Button_1 from './Button_1.vue';
 
-let server_url = "http://127.0.0.1:3000/";
-let animals_url = "http://127.0.0.1:3000/animals/";
-let animals_images_url = "http://127.0.0.1:3000/animal_previews/";
-
+let server_url = "http://127.0.0.1:8000/";
+let animals_url = "http://127.0.0.1:8000/api/animals/";
+let animals_images_url = "http://127.0.0.1:8000/animal_previews/";
+let visual_url = "https://localhost:5173/";
 
 let response = await fetch(animals_url);
 let animals_json = await response.json();
 
+// console.log(animals_json);
+
+for (var i = 0; i < animals_json.length; i++) {
+  let a = animals_images_url + animals_json[i].image;
+  console.log(a);
+}
+
 const right_click = (event) => {
   document.querySelector('.scroll-container').scrollLeft += 310;
+};
+const left_click = (event) => {
+  document.querySelector('.scroll-container').scrollLeft -= 310;
 };
 </script>
 
 <style scoped>
-.rectangle {
+.rectangle70 {
   border: 1px solid rgb(67, 85, 56);
   border-radius: 25px;
   margin-right: 40px;

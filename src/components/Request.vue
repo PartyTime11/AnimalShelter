@@ -49,7 +49,7 @@ import Button_1 from './Button_1.vue';
                 </p>
               </div>
             </div>
-            <div style="display: flex; justify-content: center">
+            <div class="text-size2" style="display: flex; justify-content: center">
               <Button_1
                 size="small"
                 color="color-dark"
