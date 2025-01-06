@@ -10,55 +10,7 @@ import Button_1 from './Button_1.vue'
         src="/Left.png"
         alt="Left"
         class="cursor-pointer pozition-left"
-        style="width: 49px; height: 69px"
-      />
-      <div class="scroll-container">
-        <router-link to="/form">
-          <div class="rectangle71">
-            <img src="/Asya.jpg" alt="Asya" class="img10" />
-            <h2 class="first-text my-text" style="font-size: 30px">Acя</h2>
-            <p class="second-text my-text text-size6">4 месяца, девочка</p>
-          </div>
-        </router-link>
-        <div class="rectangle71">
-          <img src="/Mikki.jpg" alt="Mikki" class="img10" />
-          <h2 class="first-text my-text text-size5">Микки</h2>
-          <p class="second-text my-text text-size6">3 года, мальчик</p>
-        </div>
-        <div class="rectangle71">
-          <img src="/Oskar.jpg" alt="Oskar" class="img10" />
-          <h2 class="first-text my-text text-size5">Оскар</h2>
-          <p class="second-text my-text text-size6">5 лет, мальчик</p>
-        </div>
-        <div class="rectangle71">
-          <img src="/Yasha.jpeg" alt="Yasha" class="img10" />
-          <h2 class="first-text my-text text-size5">Яша</h2>
-          <p class="second-text my-text text-size6">6 лет, мальчик</p>
-        </div>
-        <div class="rectangle71">
-          <img src="/Dim.jpg" alt="Dim" class="img10" />
-          <h2 class="first-text my-text text-size5">Дим</h2>
-          <p class="second-text my-text text-size6">8 лет, мальчик</p>
-        </div>
-        <div class="rectangle71">
-          <img src="/Dim.jpg" alt="Dim" class="img10" />
-          <h2 class="first-text my-text text-size5">Дим</h2>
-          <p class="second-text my-text text-size6">8 лет, мальчик</p>
-        </div>
-        <div class="rectangle71">
-          <img src="/Dim.jpg" alt="Dim" class="img10" />
-          <h2 class="first-text my-text text-size5">Дим</h2>
-          <p class="second-text my-text text-size6">8 лет, мальчик</p>
-        </div>
-        <div class="rectangle71">
-          <img src="/Dim.jpg" alt="Dim" class="img10" />
-          <h2 class="first-text my-text text-size5">Дим</h2>
-          <p class="second-text my-text text-size6">8 лет, мальчик</p>
-        </div>
-        <div class="rectangle71">
-          <img src="/Dim.jpg" alt="Dim" class="img10" />
-          <h2 class="first-text my-text text-size5">Дим</h2>
-          <p class="second-text my-text text-size6">8 лет, мальчик</p>
+        @click="left_click2"
         </div>
       </div>
       <img
@@ -66,25 +18,25 @@ import Button_1 from './Button_1.vue'
         src="/Right.png"
         alt="Right"
         class="cursor-pointer pozition-right"
-        style="width: 49px; height: 69px"
+        @click="right_click2"
       />
     </div>
   </div>
 </template>
 
-<script>
+<script setup>
 document.addEventListener('DOMContentLoaded', () => {
   let scroll = document.querySelector('.scroll-container')
   let left = document.getElementById('left_button')
   let right = document.getElementById('right_button')
 
   right.addEventListener('click', () => {
-    scroll.scrollLeft += 310
-  })
-  left.addEventListener('click', () => {
-    scroll.scrollLeft -= 310
-  })
-})
+const right_click2 = (event) => {
+  document.querySelector('.scroll-container2').scrollLeft += 310;
+};
+const left_click2 = (event) => {
+  document.querySelector('.scroll-container2').scrollLeft -= 310;
+};
 </script>
 
 <style scoped>

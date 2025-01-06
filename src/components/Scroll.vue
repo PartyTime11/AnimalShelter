@@ -47,20 +47,11 @@
 <script setup>
 import Button_1 from './Button_1.vue';
 
-let server_url = "http://127.0.0.1:8000/";
 let animals_url = "http://127.0.0.1:8000/api/animals/";
 let animals_images_url = "http://127.0.0.1:8000/animal_previews/";
-let visual_url = "https://localhost:5173/";
 
 let response = await fetch(animals_url);
 let animals_json = await response.json();
-
-// console.log(animals_json);
-
-for (var i = 0; i < animals_json.length; i++) {
-  let a = animals_images_url + animals_json[i].image;
-  console.log(a);
-}
 
 const right_click = (event) => {
   document.querySelector('.scroll-container').scrollLeft += 310;
