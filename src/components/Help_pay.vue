@@ -2,13 +2,10 @@
 
 <template>
   <div class="center first-text my-text text-size3" style="margin-top: 40px">
-    <p>Даже маленькая сумма приносит пользу.</p>
-    <p>Сделайте жизнь животных немного лучше!</p>
+    <p style="text-align: center;">Даже маленькая сумма приносит пользу.</p>
+    <p style="text-align: center;">Сделайте жизнь животных немного лучше!</p>
   </div>
   <div class="column" style="display: flex; justify-content: space-around; margin-top: 50px">
-    <div class="container30">
-      <p>envfa;rkfv'r</p>
-    </div>
     <div
       style="
         display: flex;
