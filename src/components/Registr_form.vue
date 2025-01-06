@@ -10,7 +10,7 @@ import Button_1 from './Button_1.vue';
           <h2 class="first-text my-text text-size3">
             Регистрация
           </h2>
-          <router-link to="/lk">
+          <router-link to="/enter">
             <h2 class="first-text my-text text-size3" style="color: gray;">
               Вход
             </h2>
@@ -40,7 +40,7 @@ import Button_1 from './Button_1.vue';
             </p>
           </div>
         </div>
-        <router-link to="/lk">
+        <router-link to="/enter">
           <div class="text-size2" style="display: flex; justify-content: center">
             <Button_1
               size="medium"

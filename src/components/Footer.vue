@@ -12,7 +12,29 @@ import Button_1 from './Button_1.vue';
       <div class="second-text text-set" style="font-size: 16px; margin-left: auto;">
         <p style="color: white; margin-top: 50px">О ПРИЮТЕ</p>
         <p class="text-line-height3" style="color: white; margin-top: 20px">
-          ЛК<br />Полезные статьи<br />Каталог животных<br />Контакты<br />О нас<br />Как помочь
+          <router-link to="/lk">
+            ЛК<br>
+          </router-link>
+
+          <router-link to="/useful_articles">
+          Полезные статьи<br>
+        </router-link>
+
+          <router-link to="/catalogue">
+          Каталог животных<br>
+        </router-link>
+
+          <router-link to="/contacts">
+          Контакты<br>
+          </router-link>
+
+          <router-link to="/about_us">
+          О нас<br>
+        </router-link>
+
+          <router-link to="/help">
+          Как помочь
+        </router-link>
         </p>
       </div>
     </div>
