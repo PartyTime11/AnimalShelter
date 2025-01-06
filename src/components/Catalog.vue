@@ -50,16 +50,7 @@ import Help_2 from './Help_2.vue';
           <p class="second-text my-text text-size2">{{ animal.age }} лет, {{ animal.gender }}</p>
         </div>
       </div>
-    </div>
-    <div class="text-size2" style="display: flex; justify-content: center; margin-top: 40px">
-        <Button_1
-          size="medium"
-          color="color-dark"
-          text_color="text-color-white"
-          hover="light-green"
-          >
-          Показать больше
-        </Button_1>
+      <Filter @filter="(value) => (animals_json = value)" />
     </div>
   </div>
   <Help_2 />
