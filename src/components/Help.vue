@@ -25,14 +25,16 @@ import Six_comp from './Six_comp.vue';
     </div>
     <Six_comp />
     <div class="text-size2" style="display: flex; justify-content: center; margin-top: 40px;">
-      <Button_1
-        size="big"
-        color="color-dark"
-        text_color="text-color-white"
-        hover="light"
-        >
-        Подробнее о видах помощи  
-      </Button_1>
+      <router-link to="/help">
+        <Button_1
+            size="big"
+            color="color-dark"
+            text_color="text-color-white"
+            hover="light"
+            >
+            Подробнее о видах помощи  
+        </Button_1>
+      </router-link>
     </div>
   </div>
 </template>

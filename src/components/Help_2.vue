@@ -7,7 +7,7 @@ import Button_1 from './Button_1.vue';
     <div class="column" style="display: flex; align-items: center; justify-content:space-between;">
       <div class="text" style="margin-bottom: 60px">
         <div class="text-left size center" style="margin-top: 30px;">
-          <p1 class="first-text text-size3 my-text">Помощь приюту</p1>
+          <p class="first-text text-size3 my-text">Помощь приюту</p>
           <div class="second-text text-size2 my-text text-line-height2 center" style="margin-top: 40px;">
             <p class="cen">Отклик неравнодушных людей помогает нам в лечении и реабилитации животных приюта, транспортировке в клинику и обратно, а также в получении необходимых лекарств.</p>
             <p class="cen" style="margin-top: 40px">Есть множество способов помочь: от полной опеки над больным животным до помощи с перевозкой или простого репоста. </p>
@@ -22,14 +22,16 @@ import Button_1 from './Button_1.vue';
           style="width: 600px; height: auto;"
         />
         <div class="text-size2" style="display: flex; justify-content: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin-top: -10px">
-          <Button_1
-            size="small"
-            color="color-dark"
-            text_color="text-color-white"
-            hover="light"
-            >
-            Помочь!
-          </Button_1>
+          <router-link to="/help">
+            <Button_1
+              size="small"
+              color="color-dark"
+              text_color="text-color-white"
+              hover="light"
+              >
+              Помочь!
+            </Button_1>
+          </router-link>
         </div>
       </div>
     </div>

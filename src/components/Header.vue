@@ -23,7 +23,7 @@
             </router-link>
           </li>
 
-          <li class="my-text cursor-pointer menu_list" @click="$router.push('/catalogue')">
+          <li class="my-text cursor-pointer menu_list" @click="$router.push('catalogue')">
             <router-link to="/сatalogue">
               <button>Каталог животных</button>
             </router-link>
