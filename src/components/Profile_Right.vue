@@ -9,9 +9,14 @@ import Scroll_view from './Scroll_view.vue';
     <Profile_Left />
     <div style="display: flex; flex-direction: column;">
       <p class="first-text my-text text-size5" style="text-align: center; margin-bottom: 20px;">Понравившиеся животные</p>
+      <Suspense> <!-- для компонентов, которые шлют запрос на сервер -->
       <Scroll_like />
-      <p class="first-text my-text text-size5" style="text-align: center; margin-top: 30px; margin-bottom: 20px">Недавно просмотренные</p>
-      <Scroll_view />
+        <template #fallback>
+          <div class="loading" style="text-align: center">
+            загрузка...
+          </div>
+        </template>
+      </Suspense>
     </div>
   </div>
 </template>

@@ -6,7 +6,14 @@ import Footer from '../components/Footer.vue';
 
 <template>
   <Header />
-  <Profile_Right />
+  <Suspense> <!-- для компонентов, которые шлют запрос на сервер -->
+    <Profile_Right />
+    <template #fallback>
+      <div class="loading" style="text-align: center">
+        загрузка...
+      </div>
+    </template>
+  </Suspense>
   <Footer />
 </template>
 
