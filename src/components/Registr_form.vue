@@ -20,9 +20,9 @@ const enter = async () => {
     <div class="container40" style="margin-top: 50px; margin-bottom: 50px">
       <div>
         <div style="display: flex; justify-content: space-evenly;">
-          <h2 class="first-text my-text text-size3">
-            Регистрация
-          </h2>
+            <h2 class="first-text my-text text-size3">
+              Регистрация
+            </h2>
           <router-link to="/enter">
             <h2 class="first-text my-text text-size3" style="color: gray;">
               Вход
@@ -35,26 +35,56 @@ const enter = async () => {
           </p>
         </div>
         <div style="margin-top: 20px">
-          <p class="rectangle41 first-text my-text" style="font-size: 15px;">Ваше имя</p>
+          <p class="rectangle41 first-text my-text" style="font-size: 15px;">
+            Имя
+            <input 
+              type="text" 
+              v-model="name" 
+              placeholder="Введите имя" 
+              class="name-input second-text"
+            />
+          </p>
           <p class="rectangle41 first-text my-text" style="font-size: 15px; margin-top: 20px">
-            Телефон
+            Фамилия
+            <input 
+              type="text" 
+              v-model="surname" 
+              placeholder="Введите фамилию" 
+              class="name-input second-text"
+            />
+          </p>
+          <p class="rectangle41 first-text my-text" style="font-size: 15px; margin-top: 20px">
+            Номер телефона
+            <input 
+              type="text" 
+              v-model="phone" 
+              placeholder="89136725342" 
+              class="name-input second-text"
+            />
+          </p>
+          <p class="rectangle41 first-text my-text" style="font-size: 15px; margin-top: 20px">
+            Пароль
+            <input 
+              type="text" 
+              v-model="password" 
+              placeholder="Введите пароль" 
+              class="name-input second-text"
+            />
           </p>
         </div>
-        <div class="rectangle43" style="margin-top: 30px">
-          <div style="cursor: pointer">
-            <p class="round" />
-          </div>
-          <div style="text-align: left">
+        <div class="rectangle43" style="text-align: left; display: flex; align-items: center">
+          <input type="checkbox">
+          <div>
             <p
               class="first-text my-text"
-              style="font-size: 15px; margin-left: 20px; margin-top: -19px"
+              style="font-size: 15px; margin-left: 20px"
             >
               Я согласен(а) с обработкой персональных данных
             </p>
           </div>
         </div>
         <router-link to="/enter">
-          <div class="text-size2" style="display: flex; justify-content: center">
+          <div class="text-size2" style="display: flex; justify-content: center; margin-top: 20px;">
             <Button_1
               size="medium"
               color="color-dark"
@@ -80,7 +110,7 @@ const enter = async () => {
   padding: 30px;
   margin-bottom: 30px;
   width: 570px;
-  height: 540px;
+  height: 690px;
   background-color: white;
   text-align: center;
   border: 5px solid rgb(67, 85, 56);

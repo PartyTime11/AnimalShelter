@@ -3,14 +3,22 @@ import Button_1 from './Button_1.vue'
 </script>
 
 <template>
-  <div class="bar2">
+  <div class="bar">
     <div class="button10" style="">
       <img
         id="left_button"
         src="/Left.png"
         alt="Left"
         class="cursor-pointer pozition-left"
+        style="width: 69px; height: 89px"
         @click="left_click2"
+      />
+      <div class="scroll-container2">
+        <div 
+          v-for="animal of animals_json"
+          :key="animal.id"
+          class="rectangle90"
+        >
         </div>
       </div>
       <img
@@ -18,6 +26,7 @@ import Button_1 from './Button_1.vue'
         src="/Right.png"
         alt="Right"
         class="cursor-pointer pozition-right"
+        style="width: 69px; height: 89px"
         @click="right_click2"
       />
     </div>
@@ -40,7 +49,7 @@ const left_click2 = (event) => {
 </script>
 
 <style scoped>
-.rectangle71 {
+.rectangle90 {
   border: 1px solid rgb(67, 85, 56);
   border-radius: 25px;
   margin-right: 40px;
@@ -50,15 +59,15 @@ const left_click2 = (event) => {
   text-align: center;
   flex-shrink: 0;
 }
-.img10 {
+.img {
   width: 200px;
   height: 180px;
   object-fit: cover;
   border-radius: 25px 25px 0 0;
 }
-.bar2 .scroll-container {
+.bar .scroll-container2 {
   display: flex;
-  width: 780px;
+  max-width: 800px;
   margin: 0 auto;
   overflow: hidden;
   overflow-x: scroll;
@@ -67,7 +76,7 @@ const left_click2 = (event) => {
   scrollbar-width: none;
 }
 
-.bar2 .button10 {
+.bar .button10 {
   display: flex;
   justify-content: center;
   align-items: center;

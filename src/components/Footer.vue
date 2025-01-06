@@ -38,15 +38,19 @@ import Button_1 from './Button_1.vue';
         </p>
       </div>
     </div>
-    <div class="" style="margin-top: 50px; display: flex; justify-content: center">
+    <div style="margin-top: 50px; display: flex; justify-content: center">
       <div class="rectangle9" style="display: flex; align-items: center">
         <img
           src="/Loupe.png"
           alt="Loupe"
-          style="width: 21px; height: 24px; object-fit: cover; margin-left: 5px"
+          style="width: 21px; height: 24px; object-fit: cover;"
         />
-        <p class="second-text text-size2" style="color: rgb(153, 153, 153); margin-left: 20px">
-          Введите ваш запрос
+        <p style="margin-left: 20px">
+          <input 
+            type="text" 
+            placeholder="Введите ваш запрос" 
+            class="name-input2"
+          />
         </p>
       </div>
       <div class="text-size2">
@@ -95,6 +99,16 @@ import Button_1 from './Button_1.vue';
   padding-right: 25px;
   padding-top: 7px;
   cursor: pointer;
+}
+.name-input2 {
+  margin-top: 5px;
+  width: 100%;
+  font-size: 20px; 
+}
+
+.name-input2:focus {
+  border-color: white;
+  outline: none;
 }
 @media screen and (max-width: 1294px) {
   .footer {
