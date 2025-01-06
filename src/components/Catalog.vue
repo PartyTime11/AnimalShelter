@@ -21,20 +21,15 @@ import Help_2 from './Help_2.vue';
   <div style="display: flex; flex-direction: column">
     <div style="display: flex; justify-content: center; gap: 40px">
       <div class="container11" style="margin-top: 60px">
-        <div class="rectangle21">
-          <img src="/Asya.jpg" alt="Asya" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Acя</h2>
-          <p class="second-text my-text text-size2">4 месяца, девочка</p>
-        </div>
-        <div class="rectangle21">
-          <img src="/Mikki.jpg" alt="Mikki" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Микки</h2>
-          <p class="second-text my-text text-size2">3 года, мальчик</p>
-        </div>
-        <div class="rectangle21 hide">
-          <img src="/Oskar.jpg" alt="Oskar" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Оскар</h2>
-          <p class="second-text my-text text-size2">5 лет, мальчик</p>
+        <div v-for="animal of animals_json" :key="animal.id" class="rectangle21">
+          <img :src="animals_images_url + animal.image" alt="Asya" class="img" />
+          <div class="first-text my-text" style="font-size: 30px">
+            <div style="display: flex; justify-content: center; margin-top: 10px">
+              {{ animal.name }}
+              <div style="margin-left: 5px" class="body">
+                <div class="like-button" :class="{ hide6: showHearts }" @click="like(animal)">
+                  <div class="heart-bg">
+                    <div id="like" class="heart-icon" :class="{ liked: animal.liked }" />
         </div>
         <div class="rectangle21 hide2">
           <img src="/Yasha.jpeg" alt="Yasha" class="img" />
@@ -52,49 +47,7 @@ import Help_2 from './Help_2.vue';
           <p class="second-text my-text text-size2">8 лет, мальчик</p>
         </div>
       </div>
-      <Filter class="hide" />
-    </div>
-    <div class="center" style="display: flex; justify-content: center;">
-      <div class="container12" style="margin-top: px">
-        <div v-for="animal of result" class="rectangle21">
-          <img :src="animal.image" alt="Asya" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">{{animal.name}}</h2>
-          <p class="second-text my-text text-size2">4 месяца, девочка</p>
-        </div>
-        <div class="rectangle21">
-          <img src="/Mikki.jpg" alt="Mikki" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Микки</h2>
-          <p class="second-text my-text text-size2">3 года, мальчик</p>
-        </div>
-        <div class="rectangle21">
-          <img src="/Oskar.jpg" alt="Oskar" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Оскар</h2>
-          <p class="second-text my-text text-size2">5 лет, мальчик</p>
-        </div>
-        <div class="rectangle21">
-          <img src="/Yasha.jpeg" alt="Yasha" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Яша</h2>
-          <p class="second-text my-text text-size2">6 лет, мальчик</p>
-        </div>
-        <div class="rectangle21">
-          <img src="/Dim.jpg" alt="Dim" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Дим</h2>
-          <p class="second-text my-text text-size2">8 лет, мальчик</p>
-        </div>
-        <div class="rectangle21">
-          <img src="/Dim.jpg" alt="Dim" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Дим</h2>
-          <p class="second-text my-text text-size2">8 лет, мальчик</p>
-        </div>
-        <div class="rectangle21 hide">
-          <img src="/Dim.jpg" alt="Dim" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Дим</h2>
-          <p class="second-text my-text text-size2">8 лет, мальчик</p>
-        </div>
-        <div class="rectangle21 hide">
-          <img src="/Dim.jpg" alt="Dim" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Дим</h2>
-          <p class="second-text my-text text-size2">8 лет, мальчик</p>
+          <p class="second-text my-text text-size2">{{ animal.age }} лет, {{ animal.gender }}</p>
         </div>
       </div>
     </div>
@@ -111,6 +64,36 @@ import Help_2 from './Help_2.vue';
   </div>
   <Help_2 />
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue';
+
+import Filter from './Filter.vue';
+import Help_2 from './Help_2.vue';
+let animals_url = 'http://127.0.0.1:8000/api/animals/';
+let animals_favorite = 'http://127.0.0.1:8000/api/favorite/';
+let animals_images_url = 'http://127.0.0.1:8000/animal_previews/';
+
+const animals_json = ref([]);
+const fetchAnimals = async () => {
+  let response = '';
+    response = await fetch(animals_url);
+  const data = await response.json();
+  console.log(data);
+  animals_json.value = data.map((animal) => ({
+    ...animal
+  }));
+};
+
+onMounted(() => {
+  fetchAnimals();
+});
+
+const like = async(animal) => {
+  animal.liked = !animal.liked;
+};
+
+</script>
 
 <style scoped>
 .catalog {
