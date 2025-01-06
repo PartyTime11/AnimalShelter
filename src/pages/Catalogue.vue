@@ -7,7 +7,14 @@ import Footer from '../components/Footer.vue';
 
 <template>
   <Header />
-  <Catalog />
+  <Suspense> <!-- для компонентов, которые шлют запрос на сервер -->
+    <Catalog />
+    <template #fallback>
+      <div class="loading" style="text-align: center">
+        загрузка...
+      </div>
+    </template>
+  </Suspense>
   <Inform />
   <Footer />
 </template>
