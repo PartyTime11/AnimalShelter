@@ -1,5 +1,18 @@
 <script setup>
 import Button_1 from './Button_1.vue';
+import { ref } from 'vue';
+
+let name = ref('');
+let surname = ref('');
+let phone = ref('');
+let password = ref('');
+
+const enter = async () => {
+  let query = `http://127.0.0.1:8000/api/register?name=${name.value}&surname=${surname.value}&phone=${phone.value}&password=${password.value}`;
+  let response = await fetch(query, { method: "POST" });
+  const animals_json = await response.json();
+};
+
 </script>
 
 <template>
@@ -47,6 +60,7 @@ import Button_1 from './Button_1.vue';
               color="color-dark"
               text_color="text-color-white"
               hover="light"
+              @click="enter"
               >
               Создать аккаунт
             </Button_1>
