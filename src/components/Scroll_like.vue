@@ -1,7 +1,3 @@
-<script setup>
-import Button_1 from './Button_1.vue'
-</script>
-
 <template>
   <div class="bar">
     <div class="button10" style="">
@@ -19,6 +15,9 @@ import Button_1 from './Button_1.vue'
           :key="animal.id"
           class="rectangle90"
         >
+          <img :src="animals_images_url + animal.image" alt="Asya" class="img" />
+          <h2 class="first-text my-text" style="font-size: 30px">{{ animal.name }}</h2>
+          <p class="second-text my-text text-size2">{{ animal.age }} лет, {{ animal.gender }}</p>
         </div>
       </div>
       <img
@@ -34,12 +33,12 @@ import Button_1 from './Button_1.vue'
 </template>
 
 <script setup>
-document.addEventListener('DOMContentLoaded', () => {
-  let scroll = document.querySelector('.scroll-container')
-  let left = document.getElementById('left_button')
-  let right = document.getElementById('right_button')
+let animals_url = "http://127.0.0.1:8000/api/animals/";
+let animals_images_url = "http://127.0.0.1:8000/animal_previews/";
 
-  right.addEventListener('click', () => {
+let response = await fetch(animals_url);
+let animals_json = await response.json();
+
 const right_click2 = (event) => {
   document.querySelector('.scroll-container2').scrollLeft += 310;
 };
