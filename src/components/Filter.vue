@@ -1,6 +1,23 @@
 <script setup>
 import Button_1 from './Button_1.vue';
 
+let kind_of_animal = ref('');
+let size = ref('');
+let temper = ref('');
+let age_range = ref('');
+let gender = ref('');
+let type_of_fur = ref('');
+let colour = ref('');
+const toggleColor = (elements, clickedIndex) => {
+  for (let i = 0; i < elements.length; i++) {
+    const element = elements[i];
+    if (clickedIndex[i] == 1) {
+      element.value.classList.add('clicked');
+    } else {
+      element.value.classList.remove('clicked');
+    }
+  }
+};
 </script>
 
 <template>
@@ -13,12 +30,22 @@ import Button_1 from './Button_1.vue';
         Кого вы ищете?
       </p>
       <div style="display: flex; justify-content: space-between; margin-top: 15px">
-        <div class="rectangle12">
+          @click="
+            () => {
+              toggleColor(catDog, [1, 0])
+              kind_of_animal = 'cat'
+            }
+          "
           <p class="second-text my-text text-size6 text-center">
             Кошка
           </p>
         </div>
-        <div class="rectangle12">
+          @click="
+            () => {
+              toggleColor(catDog, [0, 1])
+              kind_of_animal = 'dog'
+            }
+          "
           <p class="second-text my-text text-size6 text-center">
             Собака
           </p>
@@ -31,21 +58,36 @@ import Button_1 from './Button_1.vue';
         Размер
       </p>
       <div style="display: flex; justify-content: space-between; margin-top: 15px">
-        <div class="rectangle13" style="display: flex; justify-content: center; align-items: center;">
+          @click="
+            () => {
+              toggleColor(sizes, [1, 0, 0])
+              size = 'small'
+            }
+          "
           <img
             src="/Size.png"
             alt="Size"
             style="width: 16px; height: 14px;"
           >
         </div>
-        <div class="rectangle13" style="display: flex; justify-content: center; align-items: center;">
+          @click="
+            () => {
+              toggleColor(sizes, [0, 1, 0])
+              size = 'middle'
+            }
+          "
           <img
             src="/Size.png"
             alt="Size"
             style="width: 23px; height: 20px;"
           >
         </div>
-        <div class="rectangle13" style="display: flex; justify-content: center; align-items: center;">
+          @click="
+            () => {
+              toggleColor(sizes, [0, 0, 1])
+              size = 'big'
+            }
+          "
           <img
             src="/Size.png"
             alt="Size"
@@ -56,24 +98,46 @@ import Button_1 from './Button_1.vue';
       <p class="first-text my-text text-size2 text-left"
       style="margin-top: 15px">Характер</p>
       <div style="display: flex; justify-content: space-between; margin-top: 15px">
-        <div class="rectangle14">
+          @click="
+            () => {
+              toggleColor(characters, [1, 0])
+              temper = 'calm'
+            }
+          "
           <p class="second-text my-text text-size6 text-center">
             Спокойный
           </p>
         </div>
-        <div class="rectangle14">
+          @click="
+            () => {
+              toggleColor(characters, [0, 1])
+              temper = 'active'
+            }
+          "
           <p class="second-text my-text text-size6 text-center">
             Активный
           </p>
         </div>
       </div>
-      <p class="first-text my-text text-size2 text-left" style="margin-top: 15px">Возраст</p>
-      <div style="display: flex; justify-content: space-between; margin-top: 15px;">
-        <div class="rectangle15" style="display: flex; justify-content: center; align-items: center; margin-left: 2px">
-          <p class="second-text text-size6" style="color: white">0</p>
+          @click="
+            () => {
+              toggleColor(ages, [1, 0, 0])
+              age_range = '0-5'
+            }
+          "
+          @click="
+            () => {
+              toggleColor(ages, [0, 1, 0])
+              age_range = '5-10'
+            }
+          "
         </div>
-        <div class="rectangle15" style="display: flex; justify-content: center; align-items: center; margin-right: 2px;">
-          <p class="second-text text-size6" style="color: white">16</p>
+          @click="
+            () => {
+              toggleColor(ages, [0, 0, 1])
+              age_range = '10-15'
+            }
+          "
         </div>
       </div>
       <div style="display: flex; justify-content: space-between; margin-top: 10px; justify-content: center; align-items: center">
@@ -83,12 +147,22 @@ import Button_1 from './Button_1.vue';
       </div>
       <p class="first-text my-text text-size2 text-left" style="margin-top: 15px">Пол питомца</p>
       <div style="display: flex; justify-content: space-between; margin-top: 15px">
-        <div class="rectangle12">
+          @click="
+            () => {
+              toggleColor(genders, [1, 0])
+              gender = 'девочка'
+            }
+          "
           <p class="second-text my-text text-size6 text-center">
             Девочка
           </p>
         </div>
-        <div class="rectangle12">
+          @click="
+            () => {
+              toggleColor(genders, [0, 1])
+              gender = 'мальчик'
+            }
+          "
           <p class="second-text my-text text-size6 text-center">
             Мальчик
           </p>
@@ -96,25 +170,63 @@ import Button_1 from './Button_1.vue';
       </div>
       <p class="first-text my-text text-size2 text-left" style="margin-top: 15px">Тип шерсти</p>
       <div style="display: flex; justify-content: space-between; margin-top: 15px">
-        <div class="rectangle12">
+          @click="
+            () => {
+              toggleColor(wools, [1, 0])
+              type_of_fur = 'short'
+            }
+          "
           <p class="second-text my-text text-size6 text-center">
             Короткая
           </p>
         </div>
-        <div class="rectangle12">
+          @click="
+            () => {
+              toggleColor(wools, [0, 1])
+              type_of_fur = 'long'
+            }
+          "
           <p class="second-text my-text text-size6 text-center">
             Длинная
           </p>
         </div>
       </div>
-      <p class="first-text my-text text-size2 text-left" style="margin-top: 15px">Окрас</p>
-      <div style="display: flex; justify-content: space-between; margin-top: 10px;">
-        <div class="circle2" style="background-color: white;" />
-        <div class="circle2" style="background-color: rgb(217, 217, 217);" />
-        <div class="circle2" style="background-color: rgb(121, 72, 15);" />
-        <div class="circle2" style="background-color: rgb(255, 173, 14);" />
-        <div class="circle2" style="background-color: rgb(243, 212, 100);" />
-        <div class="circle2" style="background-color: black;" />
+          @click="
+            () => {
+              toggleColor(colours, [1, 0, 0, 0, 0, 0])
+              colour = 'white'
+            }
+          "
+          @click="
+            () => {
+              toggleColor(colours, [0, 1, 0, 0, 0, 0])
+              colour = 'grey'
+            }
+          "
+          @click="
+            () => {
+              toggleColor(colours, [0, 0, 1, 0, 0, 0])
+              colour = 'brown'
+            }
+          "
+          @click="
+            () => {
+              toggleColor(colours, [0, 0, 0, 1, 0, 0])
+              colour = 'ginger'
+            }
+          "
+          @click="
+            () => {
+              toggleColor(colours, [0, 0, 0, 0, 1, 0])
+              colour = 'beige'
+            }
+          "
+          @click="
+            () => {
+              toggleColor(colours, [0, 0, 0, 0, 0, 1])
+              colour = 'black'
+            }
+          "
       </div>
       <div class="text-size6" style="display: flex; justify-content: center; margin-top: 30px;">
         <Button_1
