@@ -161,10 +161,6 @@ const randomFilter = async () => {
               size = 'small'
             }
           "
-          <img
-            src="/Size.png"
-            alt="Size"
-            style="width: 16px; height: 14px;"
           >
           <img src="/Size.png" alt="Size" style="width: 16px; height: 14px" />
         </div>
@@ -178,10 +174,6 @@ const randomFilter = async () => {
               size = 'middle'
             }
           "
-          <img
-            src="/Size.png"
-            alt="Size"
-            style="width: 23px; height: 20px;"
           >
           <img src="/Size.png" alt="Size" style="width: 23px; height: 20px" />
         </div>
@@ -195,10 +187,6 @@ const randomFilter = async () => {
               size = 'big'
             }
           "
-          <img
-            src="/Size.png"
-            alt="Size"
-            style="width: 31px; height: 26px;"
           >
           <img src="/Size.png" alt="Size" style="width: 31px; height: 26px" />
         </div>

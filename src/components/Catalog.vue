@@ -1,9 +1,3 @@
-<script setup>
-import Button_1 from './Button_1.vue';
-import Filter from './Filter.vue';
-import Help_2 from './Help_2.vue';
-</script>
-
 <template>
   <div style="margin-top: 40px">
     <p class="first-text my-text left-text text-size3">Каталог собак и кошек из приюта</p>
@@ -30,23 +24,11 @@ import Help_2 from './Help_2.vue';
                 <div class="like-button" :class="{ hide6: showHearts }" @click="like(animal)">
                   <div class="heart-bg">
                     <div id="like" class="heart-icon" :class="{ liked: animal.liked }" />
-        </div>
-        <div class="rectangle21 hide2">
-          <img src="/Yasha.jpeg" alt="Yasha" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Яша</h2>
-          <p class="second-text my-text text-size2">6 лет, мальчик</p>
-        </div>
-        <div class="rectangle21 hide2">
-          <img src="/Dim.jpg" alt="Dim" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Дим</h2>
-          <p class="second-text my-text text-size2">8 лет, мальчик</p>
-        </div>
-        <div class="rectangle21 hide">
-          <img src="/Dim.jpg" alt="Dim" class="img" />
-          <h2 class="first-text my-text" style="font-size: 30px">Дим</h2>
-          <p class="second-text my-text text-size2">8 лет, мальчик</p>
-        </div>
-      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <p class="second-text my-text text-size2">{{ animal.age }} лет, {{ animal.gender }}</p>
         </div>
       </div>
@@ -170,7 +152,7 @@ const like = async(animal) => {
   display: none;
 }
 
-/* @media (min-width: 1000px) and (max-width: 1400px) {
+ /* @media (min-width: 1000px) and (max-width: 1400px) {
   .hide {
     display: none;
   }
@@ -204,6 +186,6 @@ const like = async(animal) => {
   .text-size5 {
     font-size: 20px;
   }
-}
+} */
 </style>
 
