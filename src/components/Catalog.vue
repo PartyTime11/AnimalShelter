@@ -6,12 +6,20 @@ import Help_2 from './Help_2.vue';
 
 <template>
   <div style="margin-top: 40px">
-    <p1 class="first-text my-text left-text text-size3" >Каталог собак и кошек из приюта</p1>
-    <p class="second-text my-text left-text text-size5" style="margin-top: 30px; margin-bottom: 30px;">Выберите себе питомца по фильтрам на странице или доверьтесь судьбе, а кураторы познакомят вас лично и помогут в период адаптации дома.</p>
-    <p class="second-text my-text left-text text-size5">Все животные привиты, стерилизованы, чипированы и отдаются бесплатно в добрые руки</p>
+    <p class="first-text my-text left-text text-size3">Каталог собак и кошек из приюта</p>
+    <p
+      class="second-text my-text left-text text-size5"
+      style="margin-top: 30px; margin-bottom: 30px"
+    >
+      Выберите себе питомца по фильтрам на странице или доверьтесь судьбе, а кураторы познакомят вас
+      лично и помогут в период адаптации дома.
+    </p>
+    <p class="second-text my-text left-text text-size5">
+      Все животные привиты, стерилизованы, чипированы и отдаются бесплатно в добрые руки
+    </p>
   </div>
-  <div class="flex" style="display: flex; flex-direction: column;">
-    <div class="center" style="display: flex; justify-content: center; gap: 40px">
+  <div style="display: flex; flex-direction: column">
+    <div style="display: flex; justify-content: center; gap: 40px">
       <div class="container11" style="margin-top: 60px">
         <div class="rectangle21">
           <img src="/Asya.jpg" alt="Asya" class="img" />
@@ -139,7 +147,56 @@ import Help_2 from './Help_2.vue';
   border-radius: 25px 25px 0 0;
 }
 
-@media (min-width: 1000px) and (max-width: 1400px) {
+.body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.like-button .heart-icon {
+  height: 100px;
+  width: 100px;
+  background: url('heart2.png');
+  background-position: left;
+  cursor: pointer;
+  position: absolute;
+}
+
+.like-button .heart-icon.liked {
+  animation: like-anim 0.8s steps(28) forwards;
+}
+
+@keyframes like-anim {
+  to {
+    background-position: right;
+  }
+}
+
+.like-button .heart-bg {
+  background: rgba(255, 192, 200, 0);
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 70ms ease;
+}
+
+.like-button .heart-bg:hover {
+  background: rgba(255, 192, 200, 0.7);
+}
+
+.like-button {
+  display: flex;
+  align-items: center;
+}
+
+.hide6 {
+  display: none;
+}
+
+/* @media (min-width: 1000px) and (max-width: 1400px) {
   .hide {
     display: none;
   }
