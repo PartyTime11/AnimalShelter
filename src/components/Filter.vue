@@ -121,45 +121,40 @@ const randomFilter = async () => {
 
 <template>
   <div style="display: flex; flex-direction: column; margin-top: 60px; margin-left: 0px">
-    <div
-      class="container12"
-      style="display: flex; flex-direction: column;"
-    >
-      <p class="first-text my-text text-size2 text-left">
-        Кого вы ищете?
-      </p>
+    <div class="container12" style="display: flex; flex-direction: column">
+      <p class="first-text my-text text-size2 text-left">Кого вы ищете?</p>
       <div style="display: flex; justify-content: space-between; margin-top: 15px">
+        <div
           ref="cat-filter"
+          class="button rectangle12"
           @click="
             () => {
               toggleColor(catDog, [1, 0])
               kind_of_animal = 'cat'
             }
           "
-          <p class="second-text my-text text-size6 text-center">
-            Кошка
-          </p>
+        >
+          <p class="second-text my-text text-size6 text-center">Кошка</p>
         </div>
+        <div
           ref="dog-filter"
+          class="button rectangle12"
           @click="
             () => {
               toggleColor(catDog, [0, 1])
               kind_of_animal = 'dog'
             }
           "
-          <p class="second-text my-text text-size6 text-center">
-            Собака
-          </p>
+        >
+          <p class="second-text my-text text-size6 text-center">Собака</p>
         </div>
       </div>
-      <p
-        class="first-text my-text text-size2 text-left"
-        style="margin-top: 15px"
-      >
-        Размер
-      </p>
+      <p class="first-text my-text text-size2 text-left" style="margin-top: 15px">Размер</p>
       <div style="display: flex; justify-content: space-between; margin-top: 15px">
+        <div
           ref="small-filter"
+          class="rectangle13"
+          style="display: flex; justify-content: center; align-items: center"
           @click="
             () => {
               toggleColor(sizes, [1, 0, 0])
@@ -171,8 +166,12 @@ const randomFilter = async () => {
             alt="Size"
             style="width: 16px; height: 14px;"
           >
+          <img src="/Size.png" alt="Size" style="width: 16px; height: 14px" />
         </div>
+        <div
           ref="middle-filter"
+          class="rectangle13"
+          style="display: flex; justify-content: center; align-items: center"
           @click="
             () => {
               toggleColor(sizes, [0, 1, 0])
@@ -184,8 +183,12 @@ const randomFilter = async () => {
             alt="Size"
             style="width: 23px; height: 20px;"
           >
+          <img src="/Size.png" alt="Size" style="width: 23px; height: 20px" />
         </div>
+        <div
           ref="big-filter"
+          class="rectangle13"
+          style="display: flex; justify-content: center; align-items: center"
           @click="
             () => {
               toggleColor(sizes, [0, 0, 1])
@@ -197,157 +200,204 @@ const randomFilter = async () => {
             alt="Size"
             style="width: 31px; height: 26px;"
           >
+          <img src="/Size.png" alt="Size" style="width: 31px; height: 26px" />
         </div>
       </div>
-      <p class="first-text my-text text-size2 text-left"
-      style="margin-top: 15px">Характер</p>
+      <p class="first-text my-text text-size2 text-left" style="margin-top: 15px">Характер</p>
       <div style="display: flex; justify-content: space-between; margin-top: 15px">
+        <div
           ref="calm-filter"
+          class="rectangle14"
           @click="
             () => {
               toggleColor(characters, [1, 0])
               temper = 'calm'
             }
           "
-          <p class="second-text my-text text-size6 text-center">
-            Спокойный
-          </p>
+        >
+          <p class="second-text my-text text-size6 text-center">Спокойный</p>
         </div>
+        <div
           ref="active-filter"
+          class="rectangle14"
           @click="
             () => {
               toggleColor(characters, [0, 1])
               temper = 'active'
             }
           "
-          <p class="second-text my-text text-size6 text-center">
-            Активный
-          </p>
+        >
+          <p class="second-text my-text text-size6 text-center">Активный</p>
         </div>
       </div>
+
+      <p class="first-text my-text text-size2 text-left" style="margin-top: 15px">Возраст</p>
+      <div style="display: flex; justify-content: space-between; margin-top: 15px">
+        <div
           ref="young-filter"
+          class="rectangle16"
+          style="display: flex; justify-content: center; align-items: center"
           @click="
             () => {
               toggleColor(ages, [1, 0, 0])
               age_range = '0-5'
             }
           "
+        >
+          <p class="second-text my-text text-size6 text-center">0-5</p>
+        </div>
+        <div
           ref="middle_age-filter"
+          class="rectangle16"
+          style="display: flex; justify-content: center; align-items: center"
           @click="
             () => {
               toggleColor(ages, [0, 1, 0])
               age_range = '5-10'
             }
           "
+        >
+          <p class="second-text my-text text-size6 text-center">5-10</p>
         </div>
+        <div
           ref="old-filter"
+          class="rectangle16"
+          style="display: flex; justify-content: center; align-items: center"
           @click="
             () => {
               toggleColor(ages, [0, 0, 1])
               age_range = '10-15'
             }
           "
+        >
+          <p class="second-text my-text text-size6 text-center">10-15</p>
         </div>
       </div>
-      <div style="display: flex; justify-content: space-between; margin-top: 10px; justify-content: center; align-items: center">
-        <div class="circle1" />
-        <div class="horizontal-line" />
-        <div class="circle1" />
-      </div>
+
       <p class="first-text my-text text-size2 text-left" style="margin-top: 15px">Пол питомца</p>
       <div style="display: flex; justify-content: space-between; margin-top: 15px">
+        <div
           ref="female-filter"
+          class="rectangle12"
           @click="
             () => {
               toggleColor(genders, [1, 0])
               gender = 'девочка'
             }
           "
-          <p class="second-text my-text text-size6 text-center">
-            Девочка
-          </p>
+        >
+          <p class="second-text my-text text-size6 text-center">Девочка</p>
         </div>
+        <div
           ref="male-filter"
+          class="rectangle12"
           @click="
             () => {
               toggleColor(genders, [0, 1])
               gender = 'мальчик'
             }
           "
-          <p class="second-text my-text text-size6 text-center">
-            Мальчик
-          </p>
+        >
+          <p class="second-text my-text text-size6 text-center">Мальчик</p>
         </div>
       </div>
       <p class="first-text my-text text-size2 text-left" style="margin-top: 15px">Тип шерсти</p>
       <div style="display: flex; justify-content: space-between; margin-top: 15px">
+        <div
           ref="short-filter"
+          class="rectangle12"
           @click="
             () => {
               toggleColor(wools, [1, 0])
               type_of_fur = 'short'
             }
           "
-          <p class="second-text my-text text-size6 text-center">
-            Короткая
-          </p>
+        >
+          <p class="second-text my-text text-size6 text-center">Короткая</p>
         </div>
+        <div
           ref="long-filter"
+          class="rectangle12"
           @click="
             () => {
               toggleColor(wools, [0, 1])
               type_of_fur = 'long'
             }
           "
-          <p class="second-text my-text text-size6 text-center">
-            Длинная
-          </p>
+        >
+          <p class="second-text my-text text-size6 text-center">Длинная</p>
         </div>
       </div>
+      <p class="first-text my-text text-size2 text-left" style="margin-top: 15px">Окрас</p>
+      <div style="display: flex; justify-content: space-between; margin-top: 10px">
+        <div
           ref="white-filter"
+          class="circle2"
+          style="background-color: white"
           @click="
             () => {
               toggleColor(colours, [1, 0, 0, 0, 0, 0])
               colour = 'white'
             }
           "
+        />
+        <div
           ref="gray-filter"
+          class="circle2"
+          style="background-color: rgb(217, 217, 217)"
           @click="
             () => {
               toggleColor(colours, [0, 1, 0, 0, 0, 0])
               colour = 'grey'
             }
           "
+        />
+        <div
           ref="brown-filter"
+          class="circle2"
+          style="background-color: rgb(121, 72, 15)"
           @click="
             () => {
               toggleColor(colours, [0, 0, 1, 0, 0, 0])
               colour = 'brown'
             }
           "
+        />
+        <div
           ref="red-filter"
+          class="circle2"
+          style="background-color: rgb(255, 173, 14)"
           @click="
             () => {
               toggleColor(colours, [0, 0, 0, 1, 0, 0])
               colour = 'ginger'
             }
           "
+        />
+        <div
           ref="blond-filter"
+          class="circle2"
+          style="background-color: rgb(243, 212, 100)"
           @click="
             () => {
               toggleColor(colours, [0, 0, 0, 0, 1, 0])
               colour = 'beige'
             }
           "
+        />
+        <div
           ref="black-filter"
+          class="circle2"
+          style="background-color: black"
           @click="
             () => {
               toggleColor(colours, [0, 0, 0, 0, 0, 1])
               colour = 'black'
             }
           "
+        />
       </div>
-      <div class="text-size6" style="display: flex; justify-content: center; margin-top: 30px;">
+      <div class="text-size6" style="display: flex; justify-content: center; margin-top: 30px">
         <Button_1
           size="tiny2"
           color="color-dark"
@@ -358,7 +408,7 @@ const randomFilter = async () => {
           Найти по фильтрам 
         </Button_1>
     </div>
-    <div class="text-size6" style="display: flex; justify-content: center; margin-top: 15px;">
+      <div class="text-size6" style="display: flex; justify-content: center; margin-top: 15px">
         <Button_1
           size="tiny2"
           color="color-beige"
@@ -389,18 +439,52 @@ const randomFilter = async () => {
   height: 25px;
   background-color: white;
   border-radius: 25px;
+  cursor: pointer;
+  user-select: none;
 }
+
+.rectangle13.clicked {
+  background-color: #ffb240;
+}
+.rectangle16.clicked {
+  background-color: #ffb240;
+}
+.rectangle12.clicked {
+  background-color: #ffb240;
+}
+.rectangle14.clicked {
+  background-color: #ffb240;
+}
+.circle2.clicked::after {
+  content: '✓';
+  color: green;
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .rectangle13 {
   width: 56px;
   height: 35px;
   background-color: white;
   border-radius: 25px;
+  cursor: pointer;
+  user-select: none;
+}
+.rectangle16 {
+  width: 70px;
+  height: 40px;
+  background-color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  user-select: none;
 }
 .rectangle14 {
   width: 112px;
   height: 25px;
   background-color: white;
   border-radius: 25px;
+  cursor: pointer;
+  user-select: none;
 }
 .circle1 {
   width: 16px;
@@ -423,6 +507,9 @@ const randomFilter = async () => {
   width: 26px;
   height: 26px; 
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
 
