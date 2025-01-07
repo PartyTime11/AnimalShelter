@@ -16,7 +16,7 @@ function toggleText() {
     </div>
     <div class="rectangle50" style="display: flex; align-items: center; justify-content: space-between; margin-top: 30px;">
       <p class="first-text my-text text-size2" style="text-align: left;">Мои заявки</p>
-      <div class="circle4" @click="toggleText">
+      <div style="cursor: pointer;" class="circle4" @click="toggleText">
         <img 
           src="/Button.png" 
           alt="Button" 
@@ -47,14 +47,14 @@ function toggleText() {
   flex-direction: column;
   align-content: center;
   width: 400px;
-  height: 800px;
+  height: 600px;
   padding: 20px 20px;
   border-radius: 25px;
   border: 5px solid rgb(67, 85, 56);
 }
 .rectangle50 {
   height: 61px;
-  width: 360px; 
+  width: 320px; 
   padding: 10px 20px;
   background-color: rgb(249, 233, 178);
   border-radius: 25px;

@@ -50,7 +50,14 @@ let animals_images_url = 'http://127.0.0.1:8000/animal_previews/';
 const animals_json = ref([]);
 const fetchAnimals = async () => {
   let response = '';
+  if (localStorage.getItem('token')) {
+    const params = new URLSearchParams({
+      user_token: localStorage.getItem('token')
+    });
+    response = await fetch(`${animals_url}?${params.toString()}`);
+  } else {
     response = await fetch(animals_url);
+  }
   const data = await response.json();
   console.log(data);
   animals_json.value = data.map((animal) => ({
@@ -64,8 +71,13 @@ onMounted(() => {
 
 const like = async(animal) => {
   animal.liked = !animal.liked;
+  const query = animals_favorite + '?user_token=' + localStorage.getItem('token') + '&animal_id=' + animal.id;
+  let response = await fetch(query, {
+    method: 'POST'
+  });
 };
 
+const showHearts = !localStorage.getItem('token');
 </script>
 
 <style scoped>
@@ -188,4 +200,3 @@ const like = async(animal) => {
   }
 } */
 </style>
-

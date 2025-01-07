@@ -100,7 +100,14 @@ const applyFilter = async () => {
   const query = `${animals_filter_url}?${url_kind_of_animal}&${url_gender}&${url_age_range}&${url_type_of_fur}&${url_colour}&${url_size}&${url_temper}`;
 
   let response = '';
+  if (localStorage.getItem('token')) {
+    const params = new URLSearchParams({
+      user_token: localStorage.getItem('token')
+    });
+    response = await fetch(`${animals_filter_url}?${url_kind_of_animal}&${url_gender}&${url_age_range}&${url_type_of_fur}&${url_colour}&${url_size}&${url_temper}&${params.toString()}`);
+  } else {
     response = await fetch(query);
+  }
   const animals_json = await response.json();
 
   if ( Array.isArray(animals_json) && animals_json.length == 0) {
@@ -500,4 +507,3 @@ const randomFilter = async () => {
   align-items: center;
 }
 </style>
-

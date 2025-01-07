@@ -2,7 +2,7 @@
   <div>
     <button
       class="second-text container button button:hover"
-      :class="[size, color, pozition, text_color, hover]"
+      :class="[size, color, position, text_color, hover]"
     >
       <slot />
     </button>
