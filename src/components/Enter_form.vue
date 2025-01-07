@@ -110,6 +110,8 @@ const lk = async() => {
   height: 67px;
   background-color: white;
   text-align: left;
+  display: flex;
+  flex-direction: column;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 7px;
@@ -144,4 +146,8 @@ const lk = async() => {
   padding-top: 7px;
   margin: 0 auto;
 }
+.name-input:focus {
+    outline: none;
+}
+
 </style>
