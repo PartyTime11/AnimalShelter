@@ -32,7 +32,7 @@
           <p class="second-text my-text text-size2">{{ animal.age }} лет, {{ animal.gender }}</p>
         </div>
       </div>
-      <Filter @filter="(value) => (animals_json = value)" />
+      <Filter @filter="(value) => (animals_json = value)" />  
     </div>
   </div>
   <Help_2 />
@@ -160,33 +160,14 @@ const showHearts = !localStorage.getItem('token');
   align-items: center;
 }
 
-.hide6 {
-  display: none;
-}
-
- /* @media (min-width: 1000px) and (max-width: 1400px) {
-  .hide {
-    display: none;
-  }
+ @media (min-width: 1000px) and (max-width: 1400px) {
   .container11 {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .container12 {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 500px) and (max-width: 1000px) {
-  .hide {
-    display: none;
-  }
-  .hide2 {
-    display: none;
-  }
   .container11 {
     grid-template-columns: repeat(1, 1fr);
-  }
-  .container12 {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 1294px) {
@@ -198,5 +179,5 @@ const showHearts = !localStorage.getItem('token');
   .text-size5 {
     font-size: 20px;
   }
-} */
+}
 </style>
