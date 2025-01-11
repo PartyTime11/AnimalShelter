@@ -11,7 +11,7 @@
       />
       <div class="scroll-container2">
         <div 
-          v-for="animal of animals_json"
+          v-for="animal of animals_json.filter(animal => animal.liked)"
           :key="animal.id"
           class="rectangle90"
         >
@@ -33,11 +33,10 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue';
 let animals_url = "http://127.0.0.1:8000/api/animals/";
 let animals_images_url = "http://127.0.0.1:8000/animal_previews/";
-
-let response = await fetch(animals_url);
-let animals_json = await response.json();
+let animals_favorite = 'http://127.0.0.1:8000/api/favorite/';
 
 const right_click2 = (event) => {
   document.querySelector('.scroll-container2').scrollLeft += 310;
@@ -45,6 +44,26 @@ const right_click2 = (event) => {
 const left_click2 = (event) => {
   document.querySelector('.scroll-container2').scrollLeft -= 310;
 };
+
+const animals_json = ref([]);
+const fetchAnimals = async () => {
+  let response = '';
+  if (localStorage.getItem('token')) {
+    const params = new URLSearchParams({
+      user_token: localStorage.getItem('token')
+    });
+    response = await fetch(`${animals_url}?${params.toString()}`);
+  }
+  const data = await response.json();
+  console.log(data);
+  animals_json.value = data.map((animal) => ({
+    ...animal
+  }));
+};
+
+onMounted(() => {
+  fetchAnimals();
+});
 </script>
 
 <style scoped>
