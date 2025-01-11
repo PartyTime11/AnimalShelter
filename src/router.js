@@ -12,7 +12,18 @@ import LK from './pages/LK.vue';
 
 const routes = [
   { path: '/', component: Main },
-  { path: '/registration', component: Registration },
+  {
+    path: '/registration',
+    component: Registration,
+    beforeEnter: (to, from, next) => {
+      const token = localStorage.getItem('token');
+      if (token) {
+        next({ path: '/lk' });
+      } else {
+        next();
+      }
+    }
+  },
   { path: '/enter', component: Enter },
   { 
     path: '/lk', 
