@@ -1,6 +1,18 @@
 <script setup>
+import Button_1 from './Button_1.vue';
 import Profile_Left from './Profile_Left.vue';
 import Scroll_like from './Scroll_like.vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+let animals_exit = 'http://127.0.0.1:8000//api/login/';
+
+const exit = () => {
+  localStorage.removeItem('token');
+  router.push('/');
+};
+
 </script>
 
 <template>
@@ -26,6 +38,11 @@ import Scroll_like from './Scroll_like.vue';
           alt="Flower"
           style="width: auto; height: auto; margin-top: 25px;"
         />
+      <div class="center text-size2" style="margin-top: 50px; display: flex; justify-content: center;" @click="exit">
+        <Button_1 size="small" color="color-dark" text_color="text-color-white" hover="light">
+          Выход
+        </Button_1>
+      </div>
     </div>
   </div>
 </template>
