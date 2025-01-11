@@ -28,22 +28,42 @@ import Button_1 from './Button_1.vue';
               </p>
             </div>
             <div style="margin-top: 20px">
-              <p class="rectangle5 first-text my-text" style="font-size: 15px">Ваше имя</p>
-              <p class="rectangle5 first-text my-text" style="font-size: 15px; margin-top: 20px">
-                Телефон
-              </p>
-              <p class="rectangle6 first-text my-text" style="font-size: 15px; margin-top: 20px">
-                Описание задачи
-              </p>
-            </div>
-            <div class="rectangle7" style="margin-top: 30px">
-              <div style="cursor: pointer">
-                <p class="round" />
+              <div class="rectangle5" style="font-size: 15px">
+                <p class="first-text my-text">
+                  Ваше имя
+                </p>
+                <input 
+                  type="text" 
+                  placeholder="Введите ваше имя" 
+                  class="name-input"
+                />
               </div>
-              <div style="text-align: left">
+
+              <div class="rectangle5" style="font-size: 15px; margin-top: 20px">
+                <p class="first-text my-text">Телефон</p>
+                <input 
+                  type="text" 
+                  placeholder="Введите ваш номер телефона" 
+                  class="name-input"
+                />
+              </div>
+              <div class="rectangle6" style="font-size: 15px; margin-top: 20px">
+                <p class="first-text my-text">
+                  Описание задачи
+                </p>
+                <input 
+                  type="text" 
+                  placeholder="Чем вы готовы нам помочь?" 
+                  class="name-input"
+                />
+              </div>
+            </div>
+            <div class="rectangle7" style="margin-bottom: 10px; text-align: left; display: flex; align-items: center">
+              <input type="checkbox">
+              <div>
                 <p
                   class="first-text my-text"
-                  style="font-size: 15px; margin-left: 20px; margin-top: -19px"
+                  style="font-size: 15px; margin-left: 20px;"
                 >
                   Я согласен(а) с обработкой персональных данных
                 </p>
@@ -77,7 +97,7 @@ import Button_1 from './Button_1.vue';
   margin-right: 30px;
   margin-bottom: 30px;
   width: 449px;
-  height: 67px;
+  height: 75px;
   background-color: white;
   text-align: left;
   padding-left: 25px;
@@ -138,6 +158,18 @@ import Button_1 from './Button_1.vue';
   border-radius: 3px;
   box-shadow: inset 0 4px 6px rgba(84, 81, 81, 0.5);
 }
+
+.name-input {
+  margin-top: 5px;
+  width: 100%;
+  font-size: 15px; 
+}
+
+.name-input:focus {
+  border-color: white;
+  outline: none;
+}
+
 .text-set3 {
   margin-top: 5px;
   line-height: 2.5;

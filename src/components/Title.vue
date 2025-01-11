@@ -1,5 +1,5 @@
 <script setup>
-import Button_1 from './Button_1.vue'
+import Button_1 from './Button_1.vue';
 </script>
 
 <template>
@@ -17,9 +17,11 @@ import Button_1 from './Button_1.vue'
             Возьмите собаку или кошку из приюта «Девятая жизнь» бесплатно
           </div>
           <div class="center text-size2 ord3">
-            <Button_1 size="medium" color="color-dark" text_color="text-color-white" hover="light">
-              Перейти в каталог
-            </Button_1>
+            <router-link to="catalogue">
+              <Button_1 size="medium" color="color-dark" text_color="text-color-white" hover="light">
+                Перейти в каталог
+              </Button_1>
+            </router-link>
           </div>
           <div class="ord4">
             <img src="/Титул.png" alt="Титул" class="img" />

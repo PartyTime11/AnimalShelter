@@ -67,14 +67,16 @@ import Button_1 from './Button_1.vue';
       </div>
     </div>
     <div class="text-size2" style="display: flex; justify-content: center; margin-top: 50px;">
-    <Button_1
-      size="medium2"
-      color="color-dark"
-      text_color="text-color-white"
-      hover="light"
-      >
-      Смотреть все статьи
-    </Button_1>
+      <router-link to="/useful_articles">
+        <Button_1
+          size="medium2"
+          color="color-dark"
+          text_color="text-color-white"
+          hover="light"
+          >
+          Смотреть все статьи
+        </Button_1>
+      </router-link>
   </div>
   </div>
 </template>
@@ -89,7 +91,6 @@ import Button_1 from './Button_1.vue';
   background-color: white;
   text-align: right;
   padding-right: 15px;
-  cursor: pointer;
   border: 1px solid rgb(100, 147, 102);
   display: flex; 
   align-items: center

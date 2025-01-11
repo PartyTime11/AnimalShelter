@@ -99,7 +99,6 @@
   height: 122px;
   background-color: white;
   text-align: left;
-  cursor: pointer;
 }
 .container1 {
   display: grid;

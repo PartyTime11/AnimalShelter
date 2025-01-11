@@ -5,18 +5,22 @@
       <div style="margin-left: 30px; margin-top: 20px">
         <h2 class="first-text my-text" style="font-size: 25px">Евдокия</h2>
         <p class="second-text my-text text-size2" style="cursor: pointer">+7 913 689 92 73</p>
-        <img
-          src="/Tg.png"
-          alt="Tg"
-          style="width: 64px; height: 64px; margin-top: 10px; cursor: pointer"
-        />
+        <a href="https://t.me/patalvonso">
+          <img
+            src="/Tg.png"
+            alt="Tg"
+            style="width: 64px; height: 64px; margin-top: 10px; cursor: pointer"
+          />
+        </a>
       </div>
       <div>
-        <img
-          src="/Banana.png"
-          alt="Banana"
-          style="width: 100px; margin-top: 20px; margin-left: 35px"
-        />
+        <a href="tel:+79136899273">
+          <img
+            src="/Banana.png"
+            alt="Banana"
+            style="width: 100px; margin-top: 20px; margin-left: 35px"
+          />
+        </a>
       </div>
     </div>
     <div class="rectangle8">
@@ -24,18 +28,22 @@
       <div style="margin-left: 30px; margin-top: 20px">
         <h2 class="first-text my-text" style="font-size: 25px">Настя</h2>
         <p class="second-text my-text text-size2" style="cursor: pointer">+7 913 725 64 17</p>
-        <img
-          src="/Tg.png"
-          alt="Tg"
-          style="width: 64px; height: 64px; margin-top: 10px; cursor: pointer"
-        />
+        <a href="https://t.me/purrya">
+          <img
+            src="/Tg.png"
+            alt="Tg"
+            style="width: 64px; height: 64px; margin-top: 10px; cursor: pointer"
+          />
+        </a>
       </div>
       <div>
-        <img
-          src="/Banana.png"
-          alt="Banana"
-          style="width: 100px; margin-top: 20px; margin-left: 40px"
-        />
+        <a href="tel:+79137256417">
+          <img
+            src="/Banana.png"
+            alt="Banana"
+            style="width: 100px; margin-top: 20px; margin-left: 40px"
+          />
+        </a>
       </div>
     </div>
   </div>
