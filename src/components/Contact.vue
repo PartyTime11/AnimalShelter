@@ -25,7 +25,7 @@
 </template>
 
 <style scoped>
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 1000px) {
   .column {
     margin-top: 40px;
     flex-direction: column;

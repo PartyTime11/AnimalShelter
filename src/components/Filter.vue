@@ -127,7 +127,7 @@ const randomFilter = async () => {
 </script>
 
 <template>
-  <div style="display: flex; flex-direction: column; margin-top: 60px; margin-left: 0px">
+  <div style="display: flex; flex-direction: column; margin-top: 60px; margin-left: 0px; float: right;">
     <div class="container12" style="display: flex; flex-direction: column">
       <p class="first-text my-text text-size2 text-left">Кого вы ищете?</p>
       <div style="display: flex; justify-content: space-between; margin-top: 15px">

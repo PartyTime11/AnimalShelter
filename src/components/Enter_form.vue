@@ -70,13 +70,12 @@ const lk = async() => {
             </p>
           </div>
         </div>
-        <div class="text-size2" style="display: flex; justify-content: center; margin-top: 20px;">
+        <div class="text-size2" style="display: flex; justify-content: center; margin-top: 20px;" @click="lk">
           <Button_1
             size="small"
             color="color-dark"
             text_color="text-color-white"
             hover="light"
-            @click="lk"
             >
             Войти
           </Button_1>

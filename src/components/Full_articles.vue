@@ -14,7 +14,7 @@
     </div>
   </div>
 
-  <div style="display: flex; align-items: center; margin-top: 20px">
+  <div class="column" style="display: flex; align-items: center; margin-top: 20px">
     <div class="">
       <p class="second-text my-text text-size2" style="margin-bottom: 10px">
         На улицах городов и в парках нередко можно встретить бездомных животных, нуждающихся в
@@ -79,7 +79,7 @@
     </div>
   </div>
 
-  <div style="display: flex; gap: 50px;">
+  <div class="column" style="display: flex; gap: 50px;">
     <div style="display: flex; flex-direction: column;">
       <img src="/2.png" alt="2" style="object-fit: cover; margin-top: 20px; margin-bottom: 10px;" />
       <p class="first-text my-text text-size2" style="margin-bottom: 10px">Как часто нужно кормить котят?</p>
@@ -124,7 +124,7 @@
     </div>
   </div>
 
-  <div style="display: flex; gap: 50px;">
+  <div class="column" style="display: flex; gap: 10px; align-items: center">
     <div>
       <img src="/4.png" alt="4" style="object-fit: cover; margin-top: 20px; margin-bottom: 10px;" />
     </div>
@@ -144,7 +144,7 @@
     </div>
   </div>
 
-  <div style="display: flex; gap: 50px; align-items: center">
+  <div class="column" style="display: flex; gap: 15px; align-items: center">
     <div>
       <p class="second-text my-text text-size2" style="margin-top: 30px">
         1. Адресник с именем кошки и вашими контактами + яркий шнурок для адресника<br>2. Миски для воды и еды<br>3. Корм и специальные лакомства<br>4. Лоток и наполнитель<br>5. Когтеточка<br>6. Шампунь<br>
@@ -165,7 +165,7 @@
     </div>
   </div>
 
-  <div style="display: flex; gap: 50px; align-items: center">
+  <div class="column" style="display: flex; gap: 15px; align-items: center">
     <div>
       <img src="/6.png" alt="6" style="object-fit: cover; margin-top: 20px; margin-bottom: 10px;" />
     </div>
@@ -207,8 +207,8 @@
     </div>
   </div>
 
-  <div style="display: flex;align-items: center">
-    <div style="display: flex; align-items: center; gap: 40px;">
+  <div style="display: flex; align-items: center">
+    <div class="column" style="display: flex; align-items: center; gap: 40px;">
       <div style="display: flex; flex-direction: column;">
         <p class="first-text my-text text-size2" style="margin-top: 30px">Щенки</p>
         <p class="second-text my-text text-size2" style="margin-top: 10px; max-width: 800px;">
@@ -316,7 +316,7 @@
     </div>
   </div>
 
-  <div style="display: flex; gap: 50px; margin-top: 30px">
+  <div class="column" style="display: flex; gap: 50px; margin-top: 30px">
     <div style="display: flex; flex-direction: column;">
       <p class="first-text my-text text-size2" style="margin-bottom: 10px;">Если вы берете собаку</p>
       <p class="second-text my-text text-size2">
@@ -331,10 +331,10 @@
         8. Если вы живете в частном доме, вы проверили вашу территорию, убрали потенциально опасные предметы, которые может проглотить питомец или о которые он может пораниться (железки, куски дерева, пластик). А также внимательно проверили забор, огораживающий ваш участок на наличие гвоздей, отверстий или возможности для подкопа.
         Всё это о том, как подготовить квартиру к появлению щенка, если вся работа проведена, всё убрано и спрятано, то вы готовы к появлению щенка в доме.
       </p>
-      <img src="/11.png" alt="11" style="object-fit: cover; margin-top: 20px; margin-bottom: 10px;" />
+      <img src="/10.png" alt="10" style="object-fit: cover; margin-top: 20px; margin-bottom: 10px;" />
     </div>
     <div style="display: flex; flex-direction: column;">
-      <img src="/10.png" alt="10" style="object-fit: cover; margin-top: 20px; margin-bottom: 10px;" />
+      <img src="/11.png" alt="11" style="object-fit: cover; margin-top: 20px; margin-bottom: 10px;" />
       <p class="first-text my-text text-size2" style="margin-bottom: 10px;">Если вы берете кошку</p>
       <p class="second-text my-text text-size2">
         Как подготовиться к появлению котенка в квартире?
@@ -386,7 +386,13 @@
 .collapse.clicked {
   grid-template-rows: 1fr;
 }
-/* transform: rotate(180deg);
-  transition: opacity 0.5s;
-  opacity: 0; */
+
+@media screen and (max-width: 1050px) {
+  .column {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 1294px) {
+}
+
 </style>

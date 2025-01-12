@@ -11,8 +11,8 @@ function toggleText() {
 <template>
   <div class="container50" style="display: flex;">
     <div>
-      <p class="first-text my-text text-size5" style="text-align: center;">Ирина Малыкина</p>
-      <p class="second-text my-text text-size2" style="text-align: center;">+ 7 918 287 37 26</p>
+      <p class="first-text my-text text-size5" style="text-align: center;">Приют</p>
+      <p class="second-text my-text text-size2" style="text-align: center;">Активности на сайте</p>
     </div>
     <div class="rectangle50" style="display: flex; align-items: center; justify-content: space-between; margin-top: 30px;">
       <p class="first-text my-text text-size2" style="text-align: left;">Мои заявки</p>
