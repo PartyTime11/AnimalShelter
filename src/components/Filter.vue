@@ -4,7 +4,7 @@ import Button_1 from './Button_1.vue';
 const props = defineProps(['animals_json']);
 const emit = defineEmits(['filter']);
 
-let animals_filter_url = 'http://127.0.0.1:8000/api/animals/filter/';
+let animals_filter_url = 'http://207.148.98.67:8000/api/animals/filter/';
 let kind_of_animal = ref('');
 let size = ref('');
 let temper = ref('');

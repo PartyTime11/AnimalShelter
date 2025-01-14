@@ -8,7 +8,7 @@ let phone = ref('');
 let password = ref('');
 
 const enter = async () => {
-  let query = `http://127.0.0.1:8000/api/register?name=${name.value}&surname=${surname.value}&phone=${phone.value}&password=${password.value}`;
+  let query = `http://207.148.98.67:8000/api/register?name=${name.value}&surname=${surname.value}&phone=${phone.value}&password=${password.value}`;
   let response = await fetch(query, { method: "POST" });
   const animals_json = await response.json();
 };

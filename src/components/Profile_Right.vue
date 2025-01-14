@@ -6,7 +6,7 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
-let animals_exit = 'http://127.0.0.1:8000//api/login/';
+let animals_exit = 'http://207.148.98.67:8000//api/login/';
 
 const exit = () => {
   localStorage.removeItem('token');
