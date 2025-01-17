@@ -65,7 +65,7 @@ const enter = async () => {
           <p class="rectangle41 first-text my-text" style="font-size: 15px; margin-top: 20px">
             Пароль
             <input 
-              type="text" 
+              type="password" 
               v-model="password" 
               placeholder="Введите пароль" 
               class="name-input second-text"
