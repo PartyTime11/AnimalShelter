@@ -140,6 +140,11 @@ const showHearts = !localStorage.getItem('token');
   }
 }
 
+.like-button.hide6 {
+  display: none;
+}
+
+
 .like-button .heart-bg {
   background: rgba(255, 192, 200, 0);
   border-radius: 50%;
