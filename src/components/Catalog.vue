@@ -43,9 +43,9 @@ import { ref, onMounted } from 'vue';
 
 import Filter from './Filter.vue';
 import Help_2 from './Help_2.vue';
-let animals_url = 'http://127.0.0.1:8000/api/animals/';
-let animals_favorite = 'http://127.0.0.1:8000/api/favorite/';
-let animals_images_url = 'http://127.0.0.1:8000/animal_previews/';
+let animals_url = 'http://207.148.98.67:8000/api/animals/';
+let animals_favorite = 'http://207.148.98.67:8000/api/favorite/';
+let animals_images_url = 'http://207.148.98.67:8000/animal_previews/';
 
 const animals_json = ref([]);
 const fetchAnimals = async () => {
@@ -139,6 +139,11 @@ const showHearts = !localStorage.getItem('token');
     background-position: right;
   }
 }
+
+.like-button.hide6 {
+  display: none;
+}
+
 
 .like-button .heart-bg {
   background: rgba(255, 192, 200, 0);

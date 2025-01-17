@@ -47,8 +47,8 @@
 <script setup>
 import Button_1 from './Button_1.vue';
 
-let animals_url = "http://127.0.0.1:8000/api/animals/";
-let animals_images_url = "http://127.0.0.1:8000/animal_previews/";
+let animals_url = "http://207.148.98.67:8000/api/animals/";
+let animals_images_url = "http://207.148.98.67:8000/animal_previews/";
 
 let response = await fetch(animals_url);
 let animals_json = await response.json();

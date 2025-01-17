@@ -9,7 +9,7 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 const lk = async() => {
-  let query = `http://127.0.0.1:8000/api/login?phone=${phone.value}&password=${password.value}`;
+  let query = `http://207.148.98.67:8000/api/login?phone=${phone.value}&password=${password.value}`;
   let response = await fetch(query, { method: "POST" });
   const json = await response.json(); 
   if (typeof json['error'] == "undefined") {
@@ -52,7 +52,7 @@ const lk = async() => {
           <p class="rectangle41 first-text my-text" style="font-size: 15px; margin-top: 20px">
             Пароль
             <input 
-              type="text" 
+              type="password" 
               v-model="password" 
               placeholder="Введите пароль" 
               class="name-input second-text"
